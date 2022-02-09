@@ -1,0 +1,118 @@
+
+     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous"> -->
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+
+        <div class="container-fluid navbar-light bg-light position-fixed  header-compo" style=" direction: rtl;">
+            <div class="">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light  ">
+                    <div class="container-fluid ">
+                        <img class="header-logo" src="assets/logo-imam-persian.png" alt="">
+
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed"  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon "></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent " [ngbCollapse]="isCollapsed" >
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center ps-5">
+                          <li>
+                            <a class="nav-link dropdown-toggle" (click)="Collapse = !Collapse" routerLink="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              انتخاب زبان
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" [ngbCollapse]="Collapse">
+                              <li><a class="btn btn-primary" queryParamsHandling="merge"
+                                routerLink="/fa/{{currentUrl}}"
+                                routerLinkActive="active" ><img src="../../../assets/images/iran.png" style="height: 26px;margin: 0 5px;" alt=""></a>
+                                <a class="btn btn-primary" 
+                                queryParamsHandling="merge"
+                                routerLink="/ca/{{currentUrl}}"
+                                routerLinkActive="active" ><img src="../../../assets/images/canada.png" style="height: 26px;margin: 0 5px;"  alt=""></a>
+                              </li>
+                              <li></li>
+                            </ul>
+                          </li>
+                          <li class="nav-item ms-2 button-menu ">
+                             <a class="nav-link active" aria-current="page" routerLink="#">خانه</a>
+                          </li>
+                          <li class="nav-item button-menu">
+                            <a class="nav-link " routerLink="#">{{ "about"|translate}}درباره ی ما</a>
+                          </li>
+                          <li class="nav-item button-menu">
+                            <a class="nav-link" routerLink="#">مناسبت ها</a>
+                          </li>
+                          <li class="nav-item button-menu">
+                            <a class="nav-link" routerLink="#">خدمات</a>
+                          </li>
+                          <li class="nav-item dropdown button-menu">
+                            <a class="nav-link dropdown-toggle" (click)="isCollapse = !isCollapse" routerLink="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              آموزش
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" [ngbCollapse]="isCollapse">
+                              <li><a class="dropdown-item" routerLink="#">Action</a></li>
+                              <li><a class="dropdown-item" routerLink="#">Another action</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item" routerLink="#">Something else here</a></li>
+                            </ul>
+                          </li>
+                          <li class="nav-item button-menu">
+                            <a class="nav-link" routerLink="#">ارتباط با ما</a>
+                          </li>
+                        </ul>
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center ps-5">
+                          <li class="nav-item  header-button-help " >
+                            <a class="nav-link d-flex justify-content-around" routerLink="#">
+                              <p class="">اهدا</p>
+                              <i class="fas fa-hand-holding-heart pt-1"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </nav> 
+            </div>
+        </div>
+        <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum in exercitationem illo. Quos hic voluptate ea totam consectetur voluptatum accusantium! Repellendus quis ex ratione quaerat aliquid dolore placeat blanditiis.v -->
