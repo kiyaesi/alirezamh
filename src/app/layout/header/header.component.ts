@@ -21,8 +21,9 @@ export class HeaderComponent implements OnInit {
     private router: Router,
     private translateService: TranslateService,
   ) { }
-
+    lang :any;
   ngOnInit(): void {
+    this.lang = this.localizeRouterService.parser.currentLang;
   }
   changeLanguage(locale: string): void {
     this.setCurrentUrl();

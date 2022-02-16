@@ -1,3 +1,33 @@
-{
-    "about":"vddvvdvd"
+{   
+    "DIR":"rtl",
+    "chooselang":"انتخاب زبان",
+    "about":"درباره ی ما",
+    "home":"خانه",
+    "events":"مناسبت ها",
+    "services":"خدمات",
+    "education":"اموزش",
+    "hodamag":" مجله هدی ",
+    "classes":"کلاس‌ها",
+    "lectures":"سخنرانی‌ها",
+    "contact":"ارتباط با ما",
+    "donate":"اهدا",
+    "OURSERVICES":"خدمات مرکز",
+    "FUNERALSERVICES":"خدمات فیونرال ومتوفیات",
+    "MATRIMONIALSERVICES":"عقد و عروسی",
+    "COMMUNITYSERVICES":"خدمات اجتماعی",
+    "DONATENOW":"کمک به مرکز",
+    "PRAYERTIMES":"اوقات شرعی",
+    "moreknow":"اطلاعات بیشتر",
+    "UPCOMINGEVENTS":"رویداد های آتی",
+    "upcomingeventdesc":"به دلیل شیوع ویروس کرونا به استثنای مراسم فیونرال، کلیه برنامه های عمومی مسجد تا اطلاع ثانوی به صورت آنلاین روی کانال یوتیوب مسجد برگزار خواهد شد.",
+    "TWELVERSHIABELIEFSYSTEM":"سیستم اعتقادی شیعه",
+    "BELIEFSYSTEM1":"جایگاه امامت کجاست؟",
+    "BELIEFSYSTEM2":"زیارت به چه معناست؟",
+    "BELIEFSYSTEM3":"لعن به چه معناست؟",
+    "BELIEFSYSTEM4":"و دهها سوال دیگر از این دست"
+
+
+
+
+
 }

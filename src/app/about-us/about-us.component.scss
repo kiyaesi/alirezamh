@@ -1,17 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
-
-/* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
-
-.site-wrapper{
-    
-        min-height: 350px;
-        margin-top: 114px;
-      
-}
 
 .eslami-img{
-    background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url('assets/home-picture/islamic-inner-header-bg.jpg') ;
+    background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url('../../assets/home-picture/islamic-inner-header-bg.jpg') ;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

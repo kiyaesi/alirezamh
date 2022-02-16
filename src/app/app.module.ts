@@ -40,7 +40,6 @@ import { SharedModule } from './shared/shared.module';
     BrowserAnimationsModule,
     // NgbCollapseModule.forRoot(),
     // BsDropdownModule.forRoot(),
-    AppRoutingModule,
     HttpClientModule,
     BrowserTransferStateModule,
     TranslateModule.forRoot({
@@ -51,7 +50,7 @@ import { SharedModule } from './shared/shared.module';
         deps: [HttpClient
           ,TransferState
         ]
-    }
+      }
     }),
     LocalizeRouterModule.forRoot(routes, {
       parser: {
@@ -61,7 +60,8 @@ import { SharedModule } from './shared/shared.module';
       },
       initialNavigation: true,
     }),
-    NgbModule
+    NgbModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

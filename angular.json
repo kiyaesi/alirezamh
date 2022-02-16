@@ -33,7 +33,15 @@
             "styles": [
               "src/styles.scss",
               "node_modules/@fortawesome/fontawesome-free/css/all.css",
-              "node_modules/bootstrap/dist/css/bootstrap.css"
+              {
+                
+                "input": "node_modules/bootstrap/dist/css/bootstrap.rtl.min.css",
+                "inject": false
+              },
+              {
+                "input": "node_modules/bootstrap/dist/css/bootstrap.min.css",
+                "inject": false
+              }
             ],
             "scripts": []
           },
@@ -47,8 +55,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "10kb",
+                  "maximumError": "20kb"
                 }
               ],
               "fileReplacements": [

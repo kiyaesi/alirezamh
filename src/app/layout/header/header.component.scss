@@ -8,14 +8,20 @@
     align-items: center ;
     padding: 3px  ;
     margin-right: 5px;
+    margin-top: 8px;
     text-decoration: none ;
+}
+@media (min-width:968px) {
+    .button-menu{
+    text-align: center;
+}
 }
 .header-compo {
     top: 0;
     z-index: 1000;
     align-items: center;
     min-height: 104px;
-    direction: rtl;
+    // direction: rtl;
     justify-content: center;
 }
 .button-menu:hover{
