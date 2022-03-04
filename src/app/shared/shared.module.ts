@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
+import { LocalizedRouter, LocalizeNgModuleFactory, LocalizeRouterModule } from '@gilsdav/ngx-translate-router';
 
 
 
@@ -8,7 +9,8 @@ import { TranslateModule } from '@ngx-translate/core';
   declarations: [],
   imports: [
     CommonModule,
-    TranslateModule
+    TranslateModule,
+    LocalizeRouterModule
   ],
   exports:[
     CommonModule,

@@ -6,6 +6,7 @@ import { LecturesComponent } from './lectures.component';
 import { QuestionComponent } from './question/question.component';
 import { NahjolbalaghaComponent } from './nahjolbalagha/nahjolbalagha.component';
 import { QuranRecitationComponent } from './quran-recitation/quran-recitation.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -13,11 +14,12 @@ import { QuranRecitationComponent } from './quran-recitation/quran-recitation.co
     LecturesComponent,
     QuestionComponent,
     NahjolbalaghaComponent,
-    QuranRecitationComponent
+    QuranRecitationComponent,
   ],
   imports: [
     CommonModule,
-    LecturesRoutingModule
+    LecturesRoutingModule,
+    SharedModule
   ]
 })
 export class LecturesModule { }

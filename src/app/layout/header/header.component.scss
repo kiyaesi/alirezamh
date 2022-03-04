@@ -1,6 +1,5 @@
 
 .button-menu{
-    min-width: 100px ;
     color: black ;
     background-color: #fff ;
     height: 45px ;
@@ -16,12 +15,20 @@
     text-align: center;
 }
 }
+
+.bg_light{
+    background-color: #fff;
+}
 .header-compo {
     top: 0;
     z-index: 1000;
     align-items: center;
     min-height: 104px;
-    // direction: rtl;
+    background-image: url("../../../assets/images/top_bg.png");
+    background-position: bottom;
+    background-repeat: repeat;
+    
+
     justify-content: center;
 }
 .button-menu:hover{
@@ -80,6 +87,7 @@
 
 .header-logo{
     width: 250px;
+    max-width: 50%;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
@@ -106,7 +114,6 @@
     background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%) ;
     height: 45px ;
     border-radius: 10px 10px;
-    align-items: center ;
     padding: 3px  ;
     margin-right: 5px;
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LocalizeRouterService } from '@gilsdav/ngx-translate-router';
 
 @Component({
   selector: 'app-services',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServicesComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private localizeRouterService: LocalizeRouterService,
 
+  ) { }
+  languageUrl :any;
   ngOnInit(): void {
+    this.languageUrl = this.localizeRouterService.parser.currentLang;
+
   }
 
 }

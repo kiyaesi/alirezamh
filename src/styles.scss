@@ -35,10 +35,16 @@
     text-align: center;
     background-color: #fff;
 }
+.accordion-button:not(.collapsed)::after , .accordion-button::after{
+    background-image: none !important;
+}
 
+.accordion-button{
+    background-color: rgb(232, 248, 248) !important; 
+}
 .about-card-2{
-    width: 300px !important;
-    min-height: 400px !important;
+    // width: 300px !important;
+    min-height: 500px !important;
     text-align: center !important;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px !important;
     border-radius: 10px !important;

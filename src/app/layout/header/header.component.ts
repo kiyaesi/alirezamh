@@ -12,7 +12,7 @@ import { filter } from 'rxjs/operators';
 export class HeaderComponent implements OnInit {
   locales = this.localizeRouterService.parser.locales;
   currentUrl = '';
-
+  isCollapseble : boolean=true;
   isCollapsed :boolean =true;
   isCollapse :boolean =true;
   Collapse :boolean = true;
@@ -38,6 +38,8 @@ export class HeaderComponent implements OnInit {
       this.currentUrl = this.router.url
         .replace('/' + this.localizeRouterService.parser.currentLang, '')
         .split('?')[0];
+    this.lang = this.localizeRouterService.parser.currentLang;
+
     }
 
 }

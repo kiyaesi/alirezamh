@@ -1,6 +1,7 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, Inject } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { azanService } from './core/services/azan.service';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AppComponent {
   constructor(
+    private azanservice : azanService,
     private translateService: TranslateService,
     @Inject(DOCUMENT) private document: Document,
   ){
@@ -37,4 +39,5 @@ export class AppComponent {
     }
   }
   title = 'canada';
+  
 }

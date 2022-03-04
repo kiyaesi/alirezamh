@@ -1,0 +1,33 @@
+/*! CSS Used from: http://23.99.130.38/templates/islamic_center/css/rtl/template.css */
+a{color:#5cac47;text-decoration:none;}
+a:hover,a:focus{color:#9d6d24;text-decoration:underline;}
+a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+img{vertical-align:middle;}
+h1{font-family:BNazanin;font-weight:500;line-height:1.1;color:inherit;}
+h1{margin-top:24px;margin-bottom:12px;}
+h1{font-size:39px;}
+p{margin:0 0 12px;}
+ul{margin-top:0;margin-bottom:12px;}
+ul ul{margin-bottom:0;}
+.article-content img{display:block;max-width:100%;height:auto;}
+.article-title,.article-header h1{margin:0 0 24px 0;}
+.article-title,.article-header h1:hover,.article-header h1 a:hover{color:#5cac47!important;transition:all 0.5s ease-in-out 0s;}
+/*! CSS Used from: http://23.99.130.38/templates/islamic_center/css/rtl/custom.css */
+h1,ul,li,a{color:#000;}
+a{touch-action:manipulation;transition:all 0.3s ease-in-out 0s;}
+a{touch-action:manipulation;transition:all 0.3s ease-in-out 0s;}
+a:hover{transition:all 0.3s ease-in-out 0s;}
+a:hover,a:focus,a:active{outline:none;text-decoration:none;}
+h1 a{font-weight:600;text-transform:uppercase;}
+.article-title,.article-header h1,.article-header h1 a{font-size:30px;color:#333;}
+.t3-content img{margin-bottom:30px;}
+body h1{color:#333333;font-family:BNazanin!important;font-style:normal;font-weight:300;margin:0px 0px 0px 0px;}
+figure{float:left;width:100%;position:relative;overflow:hidden;margin-bottom:0px;}
+figure img{float:left;width:100%;margin-bottom:0px;}
+img{max-width:100%;}
+::-webkit-input-placeholder{color:#777777;opacity:1;}
+:-moz-placeholder{color:#777777;opacity:1;}
+::-moz-placeholder{color:#777777;opacity:1;}
+:-ms-input-placeholder{color:#777777;opacity:1;}
+/*! CSS Used from: Embedded */
+p{font-size:16px;color:#000;}

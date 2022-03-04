@@ -1,6 +1,6 @@
-        <div class="container-fluid navbar-light bg-light position-fixed  header-compo" style="">
-            <div class="">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light  ">
+        <div class="navbar-light position-fixed  header-compo" style="width: 100%;">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg navbar-light bg_light  ">
                     <div class="container-fluid ">
                       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed"  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon "></span>
@@ -34,7 +34,7 @@
                               {{ "education"|translate}}
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown" [ngbCollapse]="isCollapse">
-                              <li><a class="dropdown-item" [href]="">{{ "hodamag"|translate}}</a></li>
+                              <li><a class="dropdown-item" [href]="'https://www.hodamagazine.com'">{{ "hodamag"|translate}}</a></li>
                               <li><a class="dropdown-item" [routerLink]="lang+'/classes'">{{ "classes"|translate}}</a></li>
                               <li><hr class="dropdown-divider"></li>
                               <li><a class="dropdown-item" [routerLink]="lang+'/lectures'">{{ "lectures"|translate}}</a></li>
@@ -43,26 +43,54 @@
                           <li class="nav-item button-menu">
                             <a class="nav-link" [routerLink]="lang+'/contact-us'">{{ "contact"|translate}}</a>
                           </li>
-                        </ul>
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center ps-5">
-                          <li class="nav-item  header-button-help " >
-                            <a class="nav-link d-flex justify-content-around" routerLink="#">
-                              <p class="">{{ "donate"|translate}}</p>
-                              <i class="fas fa-hand-holding-heart pt-1"></i>
+                         
+                          <li class="nav-item dropdown button-menu">
+                            <a class="nav-link dropdown-toggle" (click)="isCollapseble = !isCollapseble"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              {{ "lang"|translate}}
                             </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" [ngbCollapse]="isCollapseble">
+                              <li class="nav-item " >
+
+                                <a class="btn " queryParamsHandling="merge"
+                                routerLink="/fa/{{currentUrl}}"
+                                (click)="changeLanguage('fa')"
+                                routerLinkActive="active" ><img src="../../../assets/images/iran.png" style="height: 26px;margin: 0 5px;" alt=""> فارسی</a>
+                              </li> <li class="nav-item " >
+                                <a class="btn " 
+                                queryParamsHandling="merge"
+                                routerLink="/ca/{{currentUrl}}"
+                                (click)="changeLanguage('ca')"
+    
+                                routerLinkActive="active" >english<img src="../../../assets/images/canada.png" style="height: 26px;margin: 0 5px;"  alt=""></a>
+                              
+                              </li> </ul>
+                            <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center ">
+                              <li class="nav-item " >
+                                <a class="btn " queryParamsHandling="merge"
+                                routerLink="/fa/{{currentUrl}}"
+                                (click)="changeLanguage('fa')"
+                                routerLinkActive="active" ><img src="../../../assets/images/iran.png" style="height: 26px;margin: 0 5px;" alt=""></a>
+                              </li> <li class="nav-item " >
+                                <a class="btn " 
+                                queryParamsHandling="merge"
+                                routerLink="/ca/{{currentUrl}}"
+                                (click)="changeLanguage('ca')"
+    
+                                routerLinkActive="active" ><img src="../../../assets/images/canada.png" style="height: 26px;margin: 0 5px;"  alt=""></a>
+                              
+                              </li>
+                            </ul> -->
                           </li>
-                        </ul>
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center ">
-                          <li class="nav-item " >
-                            <a class="btn " queryParamsHandling="merge"
-                            routerLink="/fa/{{currentUrl}}"
-                            routerLinkActive="active" ><img src="../../../assets/images/iran.png" style="height: 26px;margin: 0 5px;" alt=""></a>
-                          </li> <li class="nav-item " >
-                            <a class="btn " 
-                            queryParamsHandling="merge"
-                            routerLink="/ca/{{currentUrl}}"
-                            routerLinkActive="active" ><img src="../../../assets/images/canada.png" style="height: 26px;margin: 0 5px;"  alt=""></a>
-                          
+                          <li class="nav-item  ">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center ps-lg-5">
+                              <li class="nav-item  header-button-help " >
+                                <a class="nav-link d-flex justify-content-start" routerLink="#">
+                                  <p class="">{{ "donate"|translate}}</p>
+                                  <i class="fas fa-hand-holding-heart pt-1"></i>
+                                </a>
+                              </li>
+                            </ul>
+
                           </li>
                         </ul>
                       </div>

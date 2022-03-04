@@ -18,6 +18,9 @@ import { LocalizeParser, LocalizeRouterModule, LocalizeRouterSettings } from '@g
 import { localizeBrowserLoaderFactory } from './core/utils/localize-browser.loader';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
+import { azanService } from './core/services/azan.service';
+import { FormsModule } from '@angular/forms';
+import { NgImageSliderModule } from 'ng-image-slider';
 // import { LocalizeRouterModule } from 'localize-router';
 
 
@@ -34,20 +37,22 @@ import { SharedModule } from './shared/shared.module';
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
      SharedModule ,
-
-    // .withServerTransition({appId: 'serverApp'})
-    
-    BrowserAnimationsModule,
-    // NgbCollapseModule.forRoot(),
-    // BsDropdownModule.forRoot(),
-    HttpClientModule,
-    BrowserTransferStateModule,
-    TranslateModule.forRoot({
-      defaultLanguage: 'fa',
-      loader: {
-        provide: TranslateLoader,
-        useFactory: translateBrowserLoaderFactory,
-        deps: [HttpClient
+     HttpClientModule,
+     FormsModule,
+     NgImageSliderModule,
+     // .withServerTransition({appId: 'serverApp'})
+     
+     BrowserAnimationsModule,
+     // NgbCollapseModule.forRoot(),
+     // BsDropdownModule.forRoot(),
+     HttpClientModule,
+     BrowserTransferStateModule,
+     TranslateModule.forRoot({
+       defaultLanguage: 'fa',
+       loader: {
+         provide: TranslateLoader,
+         useFactory: translateBrowserLoaderFactory,
+         deps: [HttpClient
           ,TransferState
         ]
       }
@@ -61,9 +66,10 @@ import { SharedModule } from './shared/shared.module';
       initialNavigation: true,
     }),
     NgbModule,
-    AppRoutingModule
+    AppRoutingModule,
+    // AngMusicPlayerModule
   ],
-  providers: [],
+  providers: [azanService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

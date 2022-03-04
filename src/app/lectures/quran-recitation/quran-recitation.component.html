@@ -1,1 +1,87 @@
-<p>quran-recitation works!</p>
+<div class="container-fluid   site-wrapper mb-md-3 eslami-img">
+    <div class="container">
+        <div class="row">
+            <div class="col-12" style="margin-top:100px;">
+                <div class="row">
+                    <div class="col"></div>
+                    <div class="col-5 text-center">
+                        <h1 class="about-text-1">{{"lectursubject4"|translate}}</h1>
+                    </div>
+                    <div class="col"></div>
+                </div>
+            </div>
+            <div class="col-12 mt-2">
+                <div class="row">
+                    <div class="col"></div>
+                    <div class="col-4 text-center about-card pt-2 ">
+                        <div class="row d-flex justify-content-around">
+                            <div class="col-auto ms-2">
+                                <a class="text-decoration-none" href="">
+                                    <i class="fas fa-home"></i>
+                                    {{"home"|translate}}
+                                </a> 
+                            </div>
+                            <div class="col">
+                                <i class="fas fa-angle-double-right"></i>
+                            </div>
+                            <div class="col-auto">{{"lectursubject4"|translate}}</div>
+                        </div>
+                    </div>
+                    <div class="col"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<div class="container pb-3 ">
+    <h2>
+        {{"lectursubject1"|translate}}
+    </h2>
+    <div class="col-12 my-4 mb-4 ps-5 ">
+        <!-- <p class="mb-3">{{"chooselang"|translate}}</p> -->
+        <button class="button-section-4 border-bottom ms-3 my-3 glass-1" (click)="lang=false">فارسی </button>
+        <button class=" button-section-4 border-bottom ms-3  my-3 glass-1" (click)="lang=true">انگلیسی</button>
+    
+    <!-- music pleayer -->
+    <div *ngIf="lang">
+    <div class="col-12 music-container">
+        <div class="myplayer ply">
+            <audio style="width: 100%; cursor: pointer;" type="audio/mp3" preload="auto" [src]="datasoundquraneng[indexforsound].url" (ended)="ended()"  controls="controls">
+                <!-- <source [src]="datasoundquraneng[indexforsound].url"  type="audio/mp3">پخش آنلاین آهنگ -->
+            </audio> 
+        </div>
+    </div>
+    <div class="col-12 mt-3">
+        <a type="button" (click)="indexforsound=i" style="text-decoration: none;" class="row" *ngFor="let item of datasoundquraneng ,let i=index" >
+            <div class="col-1 ">{{i+1}}</div>
+            <div class="col-11 px-0  border-bottom pb-3">{{item.name}}</div>
+            <div class="w-100 mb-2 mt-2"></div>
+        </a>
+            <div class="section-4-button p-3">
+               
+            </div>                              
+
+        </div>
+    </div>
+    <div *ngIf="!lang">
+        <div class="col-12 music-container">
+            <div class="myplayer ply">
+                <audio style="width: 100%; cursor: pointer;" type="audio/mp3" preload="auto" [src]="datasoundquranfa[indexforsound].url" (ended)="ended()"  controls="controls">
+                    <!-- <source [src]="datasoundquraneng[indexforsound].url"  type="audio/mp3">پخش آنلاین آهنگ -->
+                </audio> 
+            </div>
+        </div>
+        <div class="col-12 mt-3">
+            <a type="button" (click)="indexforsound=i" style="text-decoration: none;" class="row" *ngFor="let item of datasoundquranfa ,let i=index" >
+                <div class="col-1 ">{{i+1}}</div>
+                <div class="col-11 px-0  border-bottom pb-3">{{item.name}}</div>
+                <div class="w-100 mb-2 mt-2"></div>
+            </a>
+                <div class="section-4-button p-3">
+                   
+                </div>                              
+
+            </div></div>
+        </div>
+</div>

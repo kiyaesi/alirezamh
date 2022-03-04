@@ -43,7 +43,9 @@
                 "inject": false
               }
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/javascript/prayTime.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -111,7 +113,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./src/assets/javascript/prayTime.js"
+            ]
           }
         },
         "server": {

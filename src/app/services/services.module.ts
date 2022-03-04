@@ -6,6 +6,8 @@ import { ServicesComponent } from './services.component';
 import { FuneralComponent } from './funeral/funeral.component';
 import { CommunityComponent } from './community/community.component';
 import { MatrimonialComponent } from './matrimonial/matrimonial.component';
+import { SharedModule } from '../shared/shared.module';
+import { MdbAccordionModule } from 'mdb-angular-ui-kit/accordion';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { MatrimonialComponent } from './matrimonial/matrimonial.component';
   ],
   imports: [
     CommonModule,
-    ServicesRoutingModule
+    MdbAccordionModule,
+    ServicesRoutingModule,
+    SharedModule
   ]
 })
 export class ServicesModule { }

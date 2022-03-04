@@ -1,0 +1,78 @@
+/*! CSS Used from: Embedded */
+.gm-style .gm-style-mtc label{font-weight:400;}
+.gm-style .gm-style-mtc ul,.gm-style .gm-style-mtc li{box-sizing:border-box;}
+/*! CSS Used from: Embedded */
+.gm-control-active>img{box-sizing:content-box;display:none;left:50%;pointer-events:none;position:absolute;top:50%;transform:translate(-50%,-50%);}
+.gm-control-active>img:nth-child(1){display:block;}
+.gm-control-active:hover>img:nth-child(1),.gm-control-active:active>img:nth-child(1),.gm-control-active:disabled>img:nth-child(1){display:none;}
+.gm-control-active:hover>img:nth-child(2),.gm-control-active:active>img:nth-child(3),.gm-control-active:disabled>img:nth-child(4){display:block;}
+/*! CSS Used from: Embedded */
+.gm-style .gm-style-cc a,.gm-style .gm-style-cc button,.gm-style .gm-style-cc span{font-size:10px;box-sizing:border-box;}
+.gm-style .gm-style-cc a,.gm-style .gm-style-cc button,.gm-style .gm-style-cc span{outline-offset:3px;}
+/*! CSS Used from: Embedded */
+@media print{
+.gm-style .gmnoprint,.gmnoprint{display:none;}
+}
+@media screen{
+.gm-style .gmnoscreen,.gmnoscreen{display:none;}
+}
+/*! CSS Used from: Embedded */
+.gm-style-moc{background-color:rgba(0,0,0,0.45);pointer-events:none;text-align:center;transition:opacity ease-in-out;}
+.gm-style-mot{color:white;font-family:Roboto,Arial,sans-serif;font-size:22px;margin:0;position:relative;top:50%;transform:translateY(-50%);-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);}
+/*! CSS Used from: Embedded */
+.gm-style img{max-width:none;}
+.gm-style{font:400 11px Roboto, Arial, sans-serif;text-decoration:none;}
+/*! CSS Used from: http://23.99.130.38/templates/islamic_center/css/template.css */
+button{font-family:inherit;font-size:inherit;line-height:inherit;}
+a{color:#5cac47;text-decoration:none;}
+a:hover,a:focus{color:#9d6d24;text-decoration:underline;}
+a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+img{vertical-align:middle;}
+p{margin:0 0 12px;}
+ul{margin-top:0;margin-bottom:12px;}
+.t3-module{background:transparent;color:inherit;margin-bottom:24px;}
+@media screen and (min-width: 768px){
+.t3-module{margin-bottom:24px;}
+}
+.t3-module .module-inner{padding:0;}
+.module-ct{background:transparent;color:inherit;padding:0;}
+.module-ct:before,.module-ct:after{content:" ";display:table;}
+.module-ct:after{clear:both;}
+.t3-mainbody{padding-top:24px;padding-bottom:24px;}
+.t3-content{padding-top:24px;padding-bottom:24px;}
+.t3-sidebar{padding-top:24px;padding-bottom:24px;}
+
+/*! CSS Used from: http://23.99.130.38/templates/islamic_center/css/custom.css */
+ul,li,a{color:#000;font-family:Arial!important;}
+a,button,label{touch-action:manipulation;transition:all 0.3s ease-in-out 0s;}
+a{touch-action:manipulation;transition:all 0.3s ease-in-out 0s;}
+a:hover{transition:all 0.3s ease-in-out 0s;}
+a:hover,a:focus,a:active{outline:none;text-decoration:none;}
+.t3-content img{margin-bottom:30px;}
+img{max-width:100%;}
+::-webkit-input-placeholder{color:#777777;opacity:1;}
+:-moz-placeholder{color:#777777;opacity:1;}
+::-moz-placeholder{color:#777777;opacity:1;}
+:-ms-input-placeholder{color:#777777;opacity:1;}
+@media screen and (min-width: 768px) and (max-width: 1000px){
+.container{width:auto!important;}
+}
+/*! CSS Used from: http://23.99.130.38/modules/mod_bt_googlemaps/tmpl/css/style.css */
+.bt-googlemaps img{max-width:none!important;}
+/*! CSS Used from: http://23.99.130.38/modules/mod_tc_animatescroll/assets/css/style.css */
+.reveal-effect{position:relative;}
+.reveal-effect > *{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;-webkit-animation-timing-function:cubic-bezier(0.785, 0.135, 0.15, 0.86);animation-timing-function:cubic-bezier(0.785, 0.135, 0.15, 0.86);position:relative;}
+.reveal-effect > *{-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;}
+.reveal-effect{-webkit-transition-property:-webkit-transform;transition-property:-webkit-transform;transition-property:transform;transition-property:transform, -webkit-transform;}
+.reveal-effect{-webkit-transition-duration:1.2s;transition-duration:1.2s;-webkit-transition-timing-function:cubic-bezier(0.25, 0.1, 0.25, 1);transition-timing-function:cubic-bezier(0.25, 0.1, 0.25, 1);}
+.reveal-effect:after{-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;-webkit-animation-timing-function:cubic-bezier(0.785, 0.135, 0.15, 0.86);animation-timing-function:cubic-bezier(0.785, 0.135, 0.15, 0.86);}
+.reveal-effect:after{content:"";width:100%;height:100%;display:block;position:absolute;top:0;left:0;}
+.reveal-effect:after{-webkit-transform-origin:left top;transform-origin:left top;-webkit-transform:scale(0.05, 0);transform:scale(0.05, 0);-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;-webkit-animation-timing-function:cubic-bezier(0.785, 0.135, 0.15, 0.86);animation-timing-function:cubic-bezier(0.785, 0.135, 0.15, 0.86);}
+
+/*! CSS Used from: Embedded */
+.module-inner{visibility:hidden;}
+.module-inner.reveal-effect > *,.module-inner.reveal-effect:after{-webkit-animation-duration:2s;animation-duration:2s;}
+.custom{visibility:hidden;}
+.custom.reveal-effect > *,.custom.reveal-effect:after{-webkit-animation-duration:2s;animation-duration:2s;}
+/*! CSS Used from: Embedded */
+p{font-size:16px;color:#000;}
