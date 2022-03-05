@@ -53,7 +53,7 @@
                     <div class="row  about-card-2 ">
                         <div class="col-12 text-center d-flex justify-content-center my-2">
                             <div class="link-container about-circle-2">
-                                <a class="text-center text-decoration-none  about-circle-text" href="">خدمات</a>
+                                <a class="text-center text-decoration-none  about-circle-text" [routerLink]="'/'+languageUrl+'/services'">خدمات</a>
                             </div>
                         </div>
                         <div class="col-12 my-1">
@@ -70,7 +70,7 @@
                             <p>{{"service3"|translate}}</p>
                         </div>
                         <div class="col-12 my-1">
-                            <a class="button-more">{{"moreknow"|translate}}</a>
+                            <a class="button-more" [routerLink]="'/'+languageUrl+'/services'">{{"moreknow"|translate}}</a>
                         </div>
                     </div>
                 </div>
@@ -80,7 +80,7 @@
                     <div class="row  about-card-2 mt-2 mt-md-0">
                         <div class="col-12 text-center d-flex justify-content-center my-2">
                             <div class="link-container about-circle-2">
-                                <a class="text-center text-decoration-none  about-circle-text" href="">معنویت</a>
+                                <a class="text-center text-decoration-none  about-circle-text" [routerLink]="'/'+languageUrl+'/events'">معنویت</a>
                             </div>
                         </div>
                         <div class="col-12 my-1">
@@ -97,7 +97,7 @@
                             <p>{{"Spirituality3"|translate}}</p>
                         </div>
                         <div class="col-12 my-1">
-                            <a class="button-more">{{"moreknow"|translate}}</a>
+                            <a class="button-more" [routerLink]="'/'+languageUrl+'/events'">{{"moreknow"|translate}}</a>
                         </div>
                     </div>
                 </div>
@@ -107,7 +107,7 @@
                     <div class="row  about-card-2 mt-2 mt-md-0">
                         <div class="col-12 text-center d-flex justify-content-center my-2">
                             <div class="link-container about-circle-2">
-                                <a class="text-center text-decoration-none  about-circle-text" href="">فرهنگ</a>
+                                <a class="text-center text-decoration-none  about-circle-text" [routerLink]="'/'+languageUrl+'/services/community'">فرهنگ</a>
                             </div>
                         </div>
                         <div class="col-12 my-1">
@@ -123,7 +123,7 @@
                             <p>{{"Community3"|translate}}</p>
                         </div>
                         <div class="col-12 my-1">
-                            <a class="button-more">{{"moreknow"|translate}}</a>
+                            <a class="button-more" [routerLink]="'/'+languageUrl+'/services/community'">{{"moreknow"|translate}}</a>
                         </div>
                     </div>
                 </div>
@@ -133,7 +133,7 @@
                     <div class="row  about-card-2 mt-2 mt-md-0">
                         <div class="col-12 text-center d-flex justify-content-center my-2">
                             <div class="link-container about-circle-2">
-                                <a class="text-center text-decoration-none  about-circle-text" href="">علم</a>
+                                <a class="text-center text-decoration-none  about-circle-text" [routerLink]="'/'+languageUrl+'/lectures'">علم</a>
                             </div>
                         </div>
                         <div class="col-12 my-1">
@@ -150,7 +150,7 @@
                             <p>{{"Knowledge3"|translate}}</p>
                         </div>
                         <div class="col-12 my-1">
-                            <a class="button-more">{{"moreknow"|translate}}</a>
+                            <a class="button-more"  [routerLink]="'/'+languageUrl+'/lectures'" >{{"moreknow"|translate}}</a>
                         </div>
                     </div>
                 </div>

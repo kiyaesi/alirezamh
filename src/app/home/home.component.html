@@ -4,12 +4,12 @@
         <div class="row pb-3 justify-content-start  justify-content-md-start">
             <!-- Title 1 -->
             <div class="col-12 " >
-                <ng-image-slider [images]="imageObject" #nav [imageSize]="{width: '100%', height: 350}"></ng-image-slider>  
+                <ng-image-slider [showArrow]="false" [infinite]="true" [autoSlide]="true" [images]="imageObject" #nav [imageSize]="{width: '100%', height: 350}"></ng-image-slider>  
             </div>
         </div>    
         
       
-        <div class="row justify-content-between">
+        <div class="row justify-content-between" >
             <div class="col-12 ">
                 <div class="row">
                     <div class="col-12 col-md-6 ">
@@ -17,11 +17,11 @@
                             <h1 class="text-title" >{{"PRAYERTIMES"|translate}}</h1>
                         </div>
                         <div class="section2-sharei mt-2">
-                            <p>{{"PRAYER TIMES"|translate}}       </p>           
+                            <a href="http://praytime.info/" style="color: wheat;text-decoration: none;">{{"PRAYERTIMES2"|translate}}       </a>           
                             <div class="table-responsive">
-                                <table  class="table-success table-bordered border-primary">
-        <thead>
-            <tr>
+                                <table style="color: wheat" class="table-success table-bordered border-primary">
+        <thead >
+            <tr >
                 <td colspan="2" scope="col"></td>
                 <td scope="col">{{"toronto"|translate}}</td>
                 <td scope="col">{{"hamilton"|translate}}</td>
