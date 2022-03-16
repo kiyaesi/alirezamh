@@ -42,6 +42,9 @@
 .accordion-button{
     background-color: rgb(232, 248, 248) !important; 
 }
+.ng-image-slider-container > .main{
+    direction: ltr;
+}
 .about-card-2{
     // width: 300px !important;
     min-height: 500px !important;

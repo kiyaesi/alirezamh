@@ -44,7 +44,9 @@
               }
             ],
             "scripts": [
-              "src/assets/javascript/prayTime.js"
+              "src/assets/javascript/prayTime.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+
             ]
           },
           "configurations": {

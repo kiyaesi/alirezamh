@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { azanService } from '../core/services/azan.service';
 import { LocalizeRouterService } from '@gilsdav/ngx-translate-router';
-
+import {Howl, Howler} from 'howler';
 // import sound from '../../assets/homesound.json';
 declare const prayTime :any;
 
@@ -156,35 +156,27 @@ datasoundquranfa :any[] = [
   imageObject :Array<object>=[{
     image: '../../assets/home-picture/medina.jpg',
         thumbImage: '../../assets/home-picture/medina.jpg',
-        alt: 'alt of image',
-        title: 'title of image'
   },
   {
     image: '../../assets/home-picture/medina.jpg',
     thumbImage: '../../assets/home-picture/medina.jpg',
 
-        alt: 'alt of image secnd',
-        title: 'title of image num2'
   },
   {
     image: '../../assets/home-picture/medina.jpg',
     thumbImage: '../../assets/home-picture/medina.jpg',
 
-        alt: 'alt of image secnd',
-        title: 'title of image num2'
   }
 ]
-  // xml2js= xml2js.Parser(  
-  //   {  
-  //     trim: true,  
-  //     explicitArray: true  
-  //   });  
   city :string ="";
   date :dateOfAzan ={}as any;
   data :dataI  ={
     datetime : {times: [{}] as any }as any
   } as any
   azanchecker : any;
+   sound = new Howl({
+    src: ['../../assets/audios/1693591.mp3']
+  });
   
   constructor(
     private azanservice : azanService,
@@ -192,84 +184,81 @@ datasoundquranfa :any[] = [
 
     ) { }
     ngOnInit(): void {
-      this.callazantimetorento()
       console.log(this.toronto)
-      this.azanchecker = setInterval(()=>{this.checkTime(),60000})
-      this.languageUrl = this.localizeRouterService.parser.currentLang;
-
+    this.languageUrl = this.localizeRouterService.parser.currentLang;
+    this.hourofsobh= +this.toronto[0].split(":")[0];
+    this.minofsobh= +this.toronto[0].split(":")[1];
+    this.hourofzohr= +this.toronto[2].split(":")[0];
+    this.minofzohr= +this.toronto[2].split(":")[1]; 
+    this.nowhour= new Date().getHours();
+    this.hourofmaghreb= +this.toronto[5].split(":")[0];
+    this.minofmaghreb = +this.toronto[5].split(":")[1];
+    this.azansobh();
+    this.azanzohr();
+    this.azanmaghreb(); 
   }
-  checkTime(){
-   this.nowtime  =(new Date()) ;
-   if(this.toronto[0]==this.nowtime){
-     //do azan
-   }
-
-  }
-  async callazantimevancover(){
-    try {
-      const responce = await this.azanservice.gettimetehran().toPromise();
+  nowhour : number =0;
+  nowmin : number = new Date().getMinutes();
+  hourofsobh : any =0 ;
+  minofsobh : any =0 ;
+  hourofzohr : any =0 ;
+  minofzohr : any =0 ;
+  hourofmaghreb : any =0 ;
+  minofmaghreb : any =0 ;
   
-      this.data = responce.results;
-      console.log(this.data)
+  azansobh (){
+    this.hourofsobh -= this.nowhour;
+    this.minofsobh -= this.nowmin;
+    if(this.hourofsobh<0){
+      this.hourofsobh = this.hourofsobh+ 24;
+    }
+    if (this.minofsobh<0){
+      this.minofsobh = this.minofsobh +60;
+    }
+    setTimeout(() => {
+      console.log("sb")
+      this.sound.play();
+    }, ((this.hourofsobh*60*60)+(this.minofsobh*60) )*1000);
+  }
+azanzohr (){  
+  this.hourofzohr -= this.nowhour;
+  this.minofzohr -= this.nowmin;
+  if(this.hourofzohr<0){
+    this.hourofzohr = this.hourofzohr+ 24;
+  }
+  if (this.minofzohr<0){
+    this.minofzohr = this.minofzohr +60;
+  }
+  setTimeout(() => {
+    console.log("zhr")
+    this.sound.play();
+  }, ((this.hourofzohr*60*60)+(this.minofzohr*60) )*1000);
 
+    
+  }
+  azanmaghreb (){
+    console.log("shab")
+
+    this.hourofmaghreb -= this.nowhour;
+    this.minofmaghreb -= this.nowmin;
+    if(this.hourofmaghreb<0){
+      this.hourofmaghreb = this.hourofmaghreb+ 24;
+    }
+    if (this.minofmaghreb<0){
+      this.minofmaghreb = this.minofmaghreb +60;
+    }
+    setTimeout(() => {
+      this.sound.play();
+    }, ((this.hourofmaghreb*60*60)+(this.minofmaghreb*60) )*1000);
       
-    } catch {}  }
-    async callazantimetehran(){
-      try {
-        const responce = await this.azanservice.gettimetehran().toPromise();
-        
-        this.data = responce.results;
-        console.log(this.data)
-        
-        
-      } catch {}  }
-      async callazantimetorento(){
-        try {
-          const responce = await this.azanservice.gettimetehran().toPromise();
-      
-          this.data = responce.results;
-          console.log(this.data);
-          this.date = this.data.datetime[0].times;
-          console.log(this.date);
-          
-        } catch {}  }
-        async callazantimetorentoavini(){
-          try {
-            const responce = await this.azanservice.gettimetorontoavini().toPromise();
-        
-            // this.data = responce.;
-            console.log(this.data);
-            this.date = this.data.datetime[0].times;
-            console.log(this.date);
-            
-          } catch {}  }
+  }
+
+  
           toronto = prayTime.getPrayerTimes(this.dTodayDate, 43.7061, -79.5152, -5);
     hamilton = prayTime.getPrayerTimes(this.dTodayDate, 43.2414, -79.8360, -5);
     london = prayTime.getPrayerTimes(this.dTodayDate, 43, -81, -5);
     kitchener = prayTime.getPrayerTimes(this.dTodayDate, 43.5, -80.5, -5);
     montreal = prayTime.getPrayerTimes(this.dTodayDate, 45.5115, -73.7321, -5);
-          
-
-
-
-
-    audioList = [
-      {
-        url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
-        title: "Smaple 1",
-        cover: "https://i1.sndcdn.com/artworks-000249294066-uow7s0-t500x500.jpg"
-      },
-      {
-        url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3",
-        title: "Sample 2",
-        cover: "https://i1.sndcdn.com/artworks-000249294066-uow7s0-t500x500.jpg"
-      },
-      {
-        url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
-        title: "Sample 3",
-        cover: "https://i1.sndcdn.com/artworks-000249294066-uow7s0-t500x500.jpg"
-      }
-    ];
     }
     
     

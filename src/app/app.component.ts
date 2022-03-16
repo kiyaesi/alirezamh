@@ -1,22 +1,37 @@
 import { DOCUMENT } from '@angular/common';
-import { Component, Inject } from '@angular/core';
+import { Component,Renderer2, Inject, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { azanService } from './core/services/azan.service';
 
+declare const $: any;
+declare const window: any;
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   constructor(
-    private azanservice : azanService,
     private translateService: TranslateService,
+    private renderer: Renderer2,
+
     @Inject(DOCUMENT) private document: Document,
-  ){
+  )
+  {
+
     this.translateService.stream('DIR').subscribe(dir => {
       this.directionChanged(dir);
-  });}
+  });
+}
+ngOnInit(): void {
+  this.renderer.listen('window', 'click', (e: Event) => {
+    const parent = $(e.target).parents('.headerMenu');
+    if ((!parent.length && !$(e.target).hasClass('drop-down__button')) || $(e.target).hasClass('drop-down__item')) {
+      $('.drop-down--active').removeClass('drop-down--active');
+    }
+  });
+}
+  
   private directionChanged(dir: string): void {
     const htmlTag = this.document.getElementsByTagName('html')[0] as HTMLHtmlElement;
     htmlTag.dir = dir === 'rtl' ? 'rtl' : 'ltr';
