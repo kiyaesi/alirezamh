@@ -1,61 +1,62 @@
-    <div class="container  site-wrapper">
-        <!-- first section -title with cards -->
-        
-        <div class="row pb-3 justify-content-start  justify-content-md-start">
-            <!-- Title 1 -->
-            <div class="col-12 " >
-                <ng-image-slider [showArrow]="false" [infinite]="true" [autoSlide]="true" [images]="imageObject" #nav [imageSize]="{width: '100%', height: 350}"></ng-image-slider>  
-            </div>
-        </div>    
-        
-      
-        <div class="row justify-content-between" >
-            <div class="col-12 ">
-                <div class="row">
-                    <div class="col-12 col-md-6 ">
-                        <div class="home-title-2  text-center mt-3">
-                            <h1 class="text-title" >{{"PRAYERTIMES"|translate}}</h1>
-                        </div>
-                        <div class="section2-sharei mt-2">
-                            <a href="http://praytime.info/" style="text-decoration: none;">{{"PRAYERTIMES2"|translate}}       </a>           
-                            <div class="table-responsive mt-3">
-                                <table style="" class="table-success table table-striped table-bordered ">
-        <thead >
-            <tr >
-                <td colspan="2" scope="col"></td>
-                <td scope="col">{{"toronto"|translate}} </td>
-                <td scope="col">{{"hamilton"|translate}}</td>
-                <td scope="col">{{"london"|translate}}</td>
-                <td scope="col">{{"kitchener"|translate}}</td>
-                <td scope="col">{{"montreal"|translate}}</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td colspan="2">{{"aazansobh"|translate}}</td>
-                <td>{{toronto[0]}}</td>
-                <td>{{hamilton[0]}}</td>
-                <td>{{london[0]}}</td>
-                <td>{{kitchener[0]}}</td>
-                <td>{{montreal[0]}}</td>
-            </tr>
-            <tr>
-                <td colspan="2">{{"toloe"|translate}}</td>
-                <td>{{toronto[1]}}</td>
-                <td>{{hamilton[1]}}</td>
-                <td>{{london[1]}}</td>
-                <td>{{kitchener[1]}}</td>
-                <td>{{montreal[1]}}</td>
-            </tr>
-            <tr>
-                <td colspan="2">{{"Dhuhr"|translate}}</td>
-                <td>{{toronto[2]}}</td>
-                <td>{{hamilton[2]}}</td>
-                <td>{{london[2]}}</td>
-                <td>{{kitchener[2]}}</td>
-                <td>{{montreal[2]}}</td>
-            </tr>
-            <!-- <tr>
+<div class="container  site-wrapper">
+    <!-- first section -title with cards -->
+
+    <div class="row pb-3 justify-content-start  justify-content-md-start">
+        <!-- Title 1 -->
+        <div class="col-12 " *ngIf="afterview">
+            <ng-image-slider [showArrow]="false" [infinite]="true" [autoSlide]="true" [images]="imageObject" #nav
+                [imageSize]="{width: '100%', height: 350}"></ng-image-slider>
+        </div>
+    </div>
+
+
+    <div class="row justify-content-between">
+        <div class="col-12 ">
+            <div class="row">
+                <div class="col-12 col-md-6 ">
+                    <div class="home-title-2  text-center mt-3">
+                        <h1 class="text-title">{{"PRAYERTIMES"|translate}}</h1>
+                    </div>
+                    <div class="section2-sharei mt-2">
+                        <a href="http://praytime.info/" style="text-decoration: none;">{{"PRAYERTIMES2"|translate}} </a>
+                        <div class="table-responsive mt-3">
+                            <table style="" class="table-success table table-striped table-bordered ">
+                                <thead>
+                                    <tr>
+                                        <td colspan="2" scope="col"></td>
+                                        <td scope="col">{{"toronto"|translate}} </td>
+                                        <td scope="col">{{"hamilton"|translate}}</td>
+                                        <td scope="col">{{"london"|translate}}</td>
+                                        <td scope="col">{{"kitchener"|translate}}</td>
+                                        <td scope="col">{{"montreal"|translate}}</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="2">{{"aazansobh"|translate}}</td>
+                                        <td>{{toronto[0]}}</td>
+                                        <td>{{hamilton[0]}}</td>
+                                        <td>{{london[0]}}</td>
+                                        <td>{{kitchener[0]}}</td>
+                                        <td>{{montreal[0]}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">{{"toloe"|translate}}</td>
+                                        <td>{{toronto[1]}}</td>
+                                        <td>{{hamilton[1]}}</td>
+                                        <td>{{london[1]}}</td>
+                                        <td>{{kitchener[1]}}</td>
+                                        <td>{{montreal[1]}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">{{"Dhuhr"|translate}}</td>
+                                        <td>{{toronto[2]}}</td>
+                                        <td>{{hamilton[2]}}</td>
+                                        <td>{{london[2]}}</td>
+                                        <td>{{kitchener[2]}}</td>
+                                        <td>{{montreal[2]}}</td>
+                                    </tr>
+                                    <!-- <tr>
                 <td colspan="2"></td>
                 <td>{{toronto[3]}}</td>
                 <td>{{hamilton[3]}}</td>
@@ -63,23 +64,23 @@
                 <td>{{kitchener[3]}}</td>
                 <td>{{montreal[3]}}</td>
             </tr> -->
-            <tr>
-                <td colspan="2">{{'Sunset'|translate}}</td>
-                <td>{{toronto[4]}}</td>
-                <td>{{hamilton[4]}}</td>
-                <td>{{london[4]}}</td>
-                <td>{{kitchener[4]}}</td>
-                <td>{{montreal[4]}}</td>
-            </tr>
-            <tr>
-                <td colspan="2">{{"Maghrib"|translate}}</td>
-                <td>{{toronto[5]}}</td>
-                <td>{{hamilton[5]}}</td>
-                <td>{{london[5]}}</td>
-                <td>{{kitchener[5]}}</td>
-                <td>{{montreal[5]}}</td>
-            </tr>
-            <!-- <tr>
+                                    <tr>
+                                        <td colspan="2">{{'Sunset'|translate}}</td>
+                                        <td>{{toronto[4]}}</td>
+                                        <td>{{hamilton[4]}}</td>
+                                        <td>{{london[4]}}</td>
+                                        <td>{{kitchener[4]}}</td>
+                                        <td>{{montreal[4]}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">{{"Maghrib"|translate}}</td>
+                                        <td>{{toronto[5]}}</td>
+                                        <td>{{hamilton[5]}}</td>
+                                        <td>{{london[5]}}</td>
+                                        <td>{{kitchener[5]}}</td>
+                                        <td>{{montreal[5]}}</td>
+                                    </tr>
+                                    <!-- <tr>
                 <td colspan="2"></td>
                 <td>{{toronto[5]}}</td>
                 <td>{{hamilton[5]}}</td>
@@ -87,10 +88,10 @@
                 <td></td>
                 <td></td>
             </tr> -->
-        </tbody>
-    </table>
-</div>
-<!-- <select class="form-select" [(ngModel)]="city" aria-label="Default select example">
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- <select class="form-select" [(ngModel)]="city" aria-label="Default select example">
 <option selected>انتخاب شهرمورد نظر</option>
 <option value="tehran">tehran</option>
 <option value="vankover">vankover</option>
@@ -127,82 +128,86 @@
                     <div class="col-12">
                                       </div>
                                     -->
-                  </div>
-            </div>
-
-            <div class="col-12 col-md-6">
-                <div class="row">
-                    <div class="col-12 ">
-                        <div class="home-title-2  text-center mt-3">
-                            <h1 class="text-title" >{{"UPCOMINGEVENTS"|translate }}</h1>
-                        </div>
                     </div>
-                    <div class="col-12 mt-2">
-                        <div class="img-container-2">
-                            <img class="Quran-img" src="assets/home-picture/event.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <p class="mt-3 ">
-{{"upcomingeventdesc"|translate }}                            </p>
-                        <a [routerLink]="'/'+languageUrl+'/events'" class="button-more">{{"moreknow"|translate}}</a>
-                    </div>
-                  </div>
-            </div>
-        </div>  
-</div>
-        </div>        <!-- cards(3) -->
-        <hr style="margin-top: 100px;" >
-
-        <div class="row pb-3 justify-content-start  justify-content-md-start">
-            <!-- Title 1 -->
-            <div class="col-12 " >
-                <div class="home-title p-2 text-center" style="margin:auto;">
-                    <h1 class="text-title "  > {{"OURSERVICES"|translate}}</h1>
                 </div>
-            </div>
-        </div>      
 
-        <div class="row  justify-content-md-between ">
-            <div class="col-12 col-md-4  ">
-                <div class="card home-card" style="margin-top: 16px;">
-                    <img class="card-img-top" src="assets/home-picture/funeral-services.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">{{"FUNERALSERVICES"|translate}}</h5>
-                        <p class="card-text pb-2">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</p>
-                        <a [routerLink]="'/'+languageUrl+'/services/funeral'" class="button-more">{{"moreknow"|translate}}</a>
-                    </div>
-                    </div>
-            </div>
-            <div class="w-100 d-md-none"></div>
-            <div class="col-12 col-md-4 ">
-                <div class="card home-card" style="margin-top: 16px;">
-                    <img class="card-img-top" src="assets/home-picture/marriage-services.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">{{"MATRIMONIALSERVICES"|translate}}</h5>
-                        <p class="card-text pb-2">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</p>
-                        <a [routerLink]="'/'+languageUrl+'/services/matrimonial'" class="button-more">{{"moreknow"|translate}}</a>
-                    </div>
-                    </div>
-            </div>
-            <div class="w-100 d-md-none"></div>
-                <div class="col-12 col-md-4  ">
-                    <div class="card home-card" style="margin-top: 16px;">
-                        <img class="card-img-top" src="assets/home-picture/counselling-services.jpg" alt="Card image cap">
-                        <div class="card-body ">
-                        <h5 class="card-title">{{"COMMUNITYSERVICES"|translate}}</h5>
-                        <p class="card-text pb-2 ">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</p>
-                        <a [routerLink]="'/'+languageUrl+'/services/community'" class="button-more ">{{"moreknow"|translate}}</a>
+                <div class="col-12 col-md-6">
+                    <div class="row">
+                        <div class="col-12 ">
+                            <div class="home-title-2  text-center mt-3">
+                                <h1 class="text-title">{{"UPCOMINGEVENTS"|translate }}</h1>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-2">
+                            <div class="img-container-2">
+                                <img class="Quran-img" src="assets/home-picture/event.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <p class="mt-3 ">
+                                <!-- {{"upcomingeventdesc"|translate }} </p> -->
+                                <a [routerLink]="'/'+languageUrl+'/events'"
+                                    class="button-more">{{"moreknow"|translate}}</a>
                         </div>
                     </div>
                 </div>
             </div>
-        <!-- section 2 -->
-        <!-- رویداد ها  -->
-            <hr style="margin-top: 100px;" >
+        </div>
+    </div> <!-- cards(3) -->
+    <hr style="margin-top: 100px;">
 
-            <div class="row justify-content-between">
-                <!-- <div class="col-12 ">
+    <div class="row pb-3 justify-content-start  justify-content-md-start">
+        <!-- Title 1 -->
+        <div class="col-12 ">
+            <div class="home-title p-2 text-center" style="margin:auto;">
+                <h1 class="text-title "> {{"OURSERVICES"|translate}}</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="row  justify-content-md-between ">
+        <div class="col-12 col-md-4  ">
+            <div class="card home-card" style="margin-top: 16px;">
+                <img class="card-img-top" src="assets/home-picture/funeral-services.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{"FUNERALSERVICES"|translate}}</h5>
+                    <p class="card-text pb-2"></p>
+                    <a [routerLink]="'/'+languageUrl+'/services/funeral'"
+                        class="button-more">{{"moreknow"|translate}}</a>
+                </div>
+            </div>
+        </div>
+        <div class="w-100 d-md-none"></div>
+        <div class="col-12 col-md-4 ">
+            <div class="card home-card" style="margin-top: 16px;">
+                <img class="card-img-top" src="assets/home-picture/marriage-services.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{"MATRIMONIALSERVICES"|translate}}</h5>
+                    <p class="card-text pb-2"></p>
+                    <a [routerLink]="'/'+languageUrl+'/services/matrimonial'"
+                        class="button-more">{{"moreknow"|translate}}</a>
+                </div>
+            </div>
+        </div>
+        <div class="w-100 d-md-none"></div>
+        <div class="col-12 col-md-4  ">
+            <div class="card home-card" style="margin-top: 16px;">
+                <img class="card-img-top" src="assets/home-picture/counselling-services.jpg" alt="Card image cap">
+                <div class="card-body ">
+                    <h5 class="card-title">{{"COMMUNITYSERVICES"|translate}}</h5>
+                    <p class="card-text pb-2 "></p>
+                    <a [routerLink]="'/'+languageUrl+'/services/community'"
+                        class="button-more ">{{"moreknow"|translate}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- section 2 -->
+    <!-- رویداد ها  -->
+    <hr style="margin-top: 100px;">
+
+    <div class="row justify-content-between">
+        <!-- <div class="col-12 ">
                     <div class="row">
                         <div class="col-12 col-md-6 ">
                             <div class="home-title-2  text-center mt-3">
@@ -294,207 +299,226 @@
             </div>  
     </div> -->
 
-    <br>
-<!-- section 3 background img with card ------------------------>       
-    <div class="container-fluid  my-5 medina-img">
-        <div class="row">
-            <div class="col-12 col-md-4"></div>
-            <div class="col-12 col-md-4"></div>
-            <div class="col-12 col-md-4 pt-5">
-                <div class="contrainer p-4 card-3">
-                    <div class="row ">
-                        <div class="col-12 card-3-item-glass-header pt-2 py-2">
-                            <h5>{{"TWELVERSHIABELIEFSYSTEM" |translate}}</h5>
-                        </div>
-                        <div class="col-12 pt-3 card-3-item-glass">
-                            <h6>{{"BELIEFSYSTEM1" |translate}}</h6>
-                        </div>
-                        <div class="col-12 pt-3 card-3-item-glass">
-                            <h6>{{"BELIEFSYSTEM2" |translate}}</h6>
-                        </div>
-                        <div class="col-12 pt-3 card-3-item-glass">
-                            <h6>{{"BELIEFSYSTEM3" |translate}}</h6>
-                        </div>
-                        <div class="col-12 pt-3 card-3-item-glass">
-                            <h6>{{"BELIEFSYSTEM4" |translate}}</h6>
-                        </div>
-                        <div class="col-12 mt-4">
-                            <a href="https://www.hodamagazine.com/%d9%86%d8%b8%d8%a7%d9%85-%d8%a7%d8%b9%d8%aa%d9%82%d8%a7%d8%af%db%8c-%d8%b4%db%8c%d8%b9%d9%87-%d8%a8%d8%ae%d8%b4-%d8%af%d9%88%d9%85/?lang=fa" class="button-more-blue">{{"moreknow" |translate}} </a>
-                        </div>
-                      </div>
-                </div>
-            </div>
-          </div>
-    </div>
-    <br>
-<!-------- section 4 ------------------->        
-    <div class="container ">
-        <div class="row justify-content-between mt-3">
-            <div class="col-12 col-md-5 border-bottom">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="home-title-2  text-center">
-                            <h1 class="text-title" >{{"aboutcenter"|translate}}</h1>
+        <br>
+        <!-- section 3 background img with card ------------------------>
+        <div class="container-fluid  my-5 medina-img">
+            <div class="row">
+                <div class="col-12 col-md-4"></div>
+                <div class="col-12 col-md-4"></div>
+                <div class="col-12 col-md-4 pt-5">
+                    <div class="contrainer p-4 card-3">
+                        <div class="row ">
+                            <div class="col-12 card-3-item-glass-header pt-2 py-2">
+                                <h5>{{"TWELVERSHIABELIEFSYSTEM" |translate}}</h5>
+                            </div>
+                            <div class="col-12 pt-3 card-3-item-glass">
+                                <h6>{{"BELIEFSYSTEM1" |translate}}</h6>
+                            </div>
+                            <div class="col-12 pt-3 card-3-item-glass">
+                                <h6>{{"BELIEFSYSTEM2" |translate}}</h6>
+                            </div>
+                            <div class="col-12 pt-3 card-3-item-glass">
+                                <h6>{{"BELIEFSYSTEM3" |translate}}</h6>
+                            </div>
+                            <div class="col-12 pt-3 card-3-item-glass">
+                                <h6>{{"BELIEFSYSTEM4" |translate}}</h6>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <a href="https://www.hodamagazine.com/%d9%86%d8%b8%d8%a7%d9%85-%d8%a7%d8%b9%d8%aa%d9%82%d8%a7%d8%af%db%8c-%d8%b4%db%8c%d8%b9%d9%87-%d8%a8%d8%ae%d8%b4-%d8%af%d9%88%d9%85/?lang=fa"
+                                    class="button-more-blue">{{"moreknow" |translate}} </a>
+                            </div>
                         </div>
                     </div>
-                    <!-- person picture -->
-                    <div class="col-12">
-                        <div class="row">
-                            <div class="col">
+                </div>
+            </div>
+        </div>
+        <br>
+        <!-------- section 4 ------------------->
+        <div class="container ">
+            <div class="row justify-content-between mt-3">
+                <div class="col-12 col-md-5 border-bottom">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="home-title-2  text-center">
+                                <h1 class="text-title">{{"aboutcenter"|translate}}</h1>
                             </div>
-                            <div class="col-10">
-                                <div class="img-container-4  mt-2">
-                                    <img class="person-img" src="assets/home-picture/Dr_Mesbah_Moosavi.jpg" alt="">
+                        </div>
+                        <!-- person picture -->
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col">
+                                </div>
+                                <div class="col-10">
+                                    <div class="img-container-4  mt-2">
+                                        <img class="person-img" src="assets/home-picture/Dr_Mesbah_Moosavi.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="col">
                                 </div>
                             </div>
-                            <div class="col">
-                            </div>
-                          </div>    
-                    </div>
-                    <!-- person_Title -->
-                    <div class="col-12 mt-3 ">
-                        <div class="row">
-                            <div class="col">
-                              
-                            </div>
-                            <div class="col-10 text-center">
-                                <h6>
-                                {{"drseyedkazem"|translate}}    
-                                </h6>
-                            </div>
-                            <div class="col">
-                              
-                            </div>
-                          </div>
-                    </div>
-                    <div class="col-12 mt-1">
-                        <p>
-{{"drseyedresume"|translate}}                        </p>
-                    </div>
-                    <!-- button -->
-                    <div class="col-12 my-2 mb-4 ps-0">
-                        <a class="button-section-4 border-bottom   glass-1" [routerLink]="'/'+languageUrl+'/about-us'">{{"moreknow"|translate}} </a>
-                        <a class="button-section-4 border-bottom ms-3  glass-1" [routerLink]="'/'+languageUrl+'/about-us/bio'"> {{"biography"|translate}} </a>
-                        <a class=" button-section-4 border-bottom ms-3  glass-1" [routerLink]="'/'+languageUrl+'/about-us/bio'">{{"article"|translate}}  </a>
-                    </div>
-                  </div>
-            </div>
-            <!-- section-4-left -->
-            <div class="col-12 col-md-5 border-bottom mt-3 mt-md-0 ">
-                <div class="row">
-                    <div class="col-12 ps-0">
-                        <div class="home-title-2  text-center">
-                            <h1 class="text-title" >{{"learnEslam"|translate}}</h1>
                         </div>
-                    </div>
-                    <div class="col-12 my-4 mb-4 ps-0">
-                        <a class="button-section-4 border-bottom ms-3  glass-1" (click)="lang=false">فارسی </a>
-                        <a class=" button-section-4 border-bottom ms-3  glass-1" (click)="lang=true">انگلیسی</a>
-                    </div>
-                    <!-- music pleayer -->
-                    <div *ngIf="lang">
-                    <div class="col-12 music-container">
-                        <div class="myplayer ply">
-                            <audio style="width: 100%; cursor: pointer;" type="audio/mp3" preload="auto" [src]="datasoundquraneng[indexforsound].url" (ended)="ended()"  controls="controls">
-                                <!-- <source [src]="datasoundquraneng[indexforsound].url"  type="audio/mp3">پخش آنلاین آهنگ -->
-                            </audio> 
-                        </div>
-                    </div>
-                    <div class="col-12 mt-3">
-                        <a type="button" (click)="indexforsound=i" style="text-decoration: none;" class="row" *ngFor="let item of datasoundquraneng ,let i=index" >
-                            <div class="col-1 ">{{i+1}}</div>
-                            <div class="col-11 px-0  border-bottom pb-3">{{item.name}}</div>
-                            <div class="w-100 mb-2 mt-2"></div>
-                        </a>
-                            <div class="section-4-button p-3">
-                                <a class=" button-section-4 border-bottom ms-3  glass-1" [routerLink]="'/'+languageUrl+'/lectures'">  بیشتر گوش کنید</a>
-                               
-                            </div>                              
+                        <!-- person_Title -->
+                        <div class="col-12 mt-3 ">
+                            <div class="row">
+                                <div class="col">
 
-                        </div>
-                    </div>
-                    <div *ngIf="!lang">
-                        <div class="col-12 music-container">
-                            <div class="myplayer ply">
-                                <audio style="width: 100%; cursor: pointer;" type="audio/mp3" preload="auto" [src]="datasoundquranfa[indexforsound].url" (ended)="ended()"  controls="controls">
-                                    <!-- <source [src]="datasoundquraneng[indexforsound].url"  type="audio/mp3">پخش آنلاین آهنگ -->
-                                </audio> 
+                                </div>
+                                <div class="col-10 text-center">
+                                    <h6>
+                                        {{"drseyedkazem"|translate}}
+                                    </h6>
+                                </div>
+                                <div class="col">
+
+                                </div>
                             </div>
                         </div>
-                        <div class="col-12 mt-3">
-                            <a type="button" (click)="indexforsound=i" style="text-decoration: none;" class="row" *ngFor="let item of datasoundquranfa ,let i=index" >
-                                <div class="col-1 ">{{i+1}}</div>
-                                <div class="col-11 px-0  border-bottom pb-3">{{item.name}}</div>
-                                <div class="w-100 mb-2 mt-2"></div>
-                            </a>
+                        <div class="col-12 mt-1">
+                            <p>
+                                {{"drseyedresume"|translate}} </p>
+                        </div>
+                        <!-- button -->
+                        <div class="col-12 my-2 mb-4 ps-0">
+                            <a class="button-section-4 border-bottom   glass-1"
+                                [routerLink]="'/'+languageUrl+'/about-us'">{{"moreknow"|translate}} </a>
+                            <a class="button-section-4 border-bottom ms-3  glass-1"
+                                [routerLink]="'/'+languageUrl+'/about-us/bio'"> {{"biography"|translate}} </a>
+                            <a class=" button-section-4 border-bottom ms-3  glass-1"
+                                [routerLink]="'/'+languageUrl+'/about-us/bio'">{{"article"|translate}} </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- section-4-left -->
+                <div class="col-12 col-md-5 border-bottom mt-3 mt-md-0 ">
+                    <div class="row">
+                        <div class="col-12 ps-0">
+                            <div class="home-title-2  text-center">
+                                <h1 class="text-title">{{"learnEslam"|translate}}</h1>
+                            </div>
+                        </div>
+                        <div class="col-12 my-4 mb-4 ps-0">
+                            <a class="button-section-4 border-bottom ms-3  glass-1" (click)="lang=false">فارسی </a>
+                            <a class=" button-section-4 border-bottom ms-3  glass-1" (click)="lang=true">انگلیسی</a>
+                        </div>
+                        <!-- music pleayer -->
+                        <div *ngIf="lang">
+                            <div class="col-12 music-container">
+                                <div class="myplayer ply">
+                                    <audio style="width: 100%; cursor: pointer;" type="audio/mp3" preload="auto"
+                                        [src]="datasoundquraneng[indexforsound].url" (ended)="ended()"
+                                        controls="controls">
+                                        <!-- <source [src]="datasoundquraneng[indexforsound].url"  type="audio/mp3">پخش آنلاین آهنگ -->
+                                    </audio>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-3">
+                                <a type="button" (click)="indexforsound=i" style="text-decoration: none;" class="row"
+                                    *ngFor="let item of datasoundquraneng ,let i=index">
+                                    <div class="col-1 ">{{i+1}}</div>
+                                    <div class="col-11 px-0  border-bottom pb-3">{{item.name}}</div>
+                                    <div class="w-100 mb-2 mt-2"></div>
+                                </a>
                                 <div class="section-4-button p-3">
-                                    <a class=" button-section-4 border-bottom ms-3  glass-1" [routerLink]="'/'+languageUrl+'/lectures'">  بیشتر گوش کنید</a>
-                                   
-                                </div>                              
-    
+                                    <a class=" button-section-4 border-bottom ms-3  glass-1"
+                                        [routerLink]="'/'+languageUrl+'/lectures'"> بیشتر گوش کنید</a>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div *ngIf="!lang">
+                            <div class="col-12 music-container">
+                                <div class="myplayer ply">
+                                    <audio style="width: 100%; cursor: pointer;" type="audio/mp3" preload="auto"
+                                        [src]="datasoundquranfa[indexforsound].url" (ended)="ended()"
+                                        controls="controls">
+                                        <!-- <source [src]="datasoundquraneng[indexforsound].url"  type="audio/mp3">پخش آنلاین آهنگ -->
+                                    </audio>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-3">
+                                <a type="button" (click)="indexforsound=i" style="text-decoration: none;" class="row"
+                                    *ngFor="let item of datasoundquranfa ,let i=index">
+                                    <div class="col-1 ">{{i+1}}</div>
+                                    <div class="col-11 px-0  border-bottom pb-3">{{item.name}}</div>
+                                    <div class="w-100 mb-2 mt-2"></div>
+                                </a>
+                                <div class="section-4-button p-3">
+                                    <a class=" button-section-4 border-bottom ms-3  glass-1"
+                                        [routerLink]="'/'+languageUrl+'/lectures'"> بیشتر گوش کنید</a>
+
+                                </div>
+
                             </div>
                         </div>
                     </div>
                     <div class="col-12">
-                        <p style="padding-top: 20px;" class=""><iframe src="https://www.youtube.com/embed/FarUl7W0awY?list=PLlzRrgpIYqqpahAzxxIqY6iJIlgAND0fm" width="100%" height="300" frameborder="0" allowfullscreen="allowfullscreen" class=""></iframe></p>
+                        <p style="padding-top: 20px;" class=""><iframe
+                                src="https://www.youtube.com/embed/FarUl7W0awY?list=PLlzRrgpIYqqpahAzxxIqY6iJIlgAND0fm"
+                                width="100%" height="300" frameborder="0" allowfullscreen="allowfullscreen"
+                                class=""></iframe></p>
                     </div>
 
                 </div>
             </div>
-          </div>
+        </div>
     </div>
     <br>
-<!-- section 5 (last section) ---------------->       
+    <!-- section 5 (last section) ---------------->
     <div class="container-fluid  my-5 jungle-img">
         <div class="container">
             <div class="row ">
-              <div class="col-12 text-center mt-5 d-flex justify-content-center">
-                  <h5 class=" home-bg-light-title" >{{"USEFULLINKS"|translate}}</h5>
-              </div>
-              <div class="col-12 text-center mt-3 d-flex justify-content-center">
-                  <h6 class="home-bg-light-text" >{{"Visittheselinkstolearnmoreaboutthem"|translate}}</h6>
-              </div>
-              <div class="col-12 mt-5 mb-2">
-                <div class="row">
-                    <div class="col d-flex justify-content-center mb-3 mb-md-0 ">
-                        <div class="link-container circle-link-4 text-center">
-                            <a class="text-center text-decoration-none  cirlce-link-text" href="https://qiblafinder.withgoogle.com/intl/en/desktop">
-                                {{"QIBLAHFINDER"|translate}}
-                            </a>
+                <div class="col-12 text-center mt-5 d-flex justify-content-center">
+                    <h5 class=" home-bg-light-title">{{"USEFULLINKS"|translate}}</h5>
+                </div>
+                <div class="col-12 text-center mt-3 d-flex justify-content-center">
+                    <h6 class="home-bg-light-text">{{"Visittheselinkstolearnmoreaboutthem"|translate}}</h6>
+                </div>
+                <div class="col-12 mt-5 mb-2">
+                    <div class="row">
+                        <div class="col d-flex justify-content-center mb-3 mb-md-0 ">
+                            <div class="link-container circle-link-4 text-center">
+                                <a class="text-center text-decoration-none  cirlce-link-text"
+                                    href="https://qiblafinder.withgoogle.com/intl/en/desktop">
+                                    {{"QIBLAHFINDER"|translate}}
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col text-center d-flex justify-content-center mb-3 mb-md-0">
+                            <div class="link-container circle-link-4">
+                                <a class="text-center  text-decoration-none cirlce-link-text" href="http://duas.org/">
+                                    {{"DUAS"|translate}}
+
+
+                                </a>
+                            </div>
+                        </div>
+                        <div class="w-100 d-md-none"></div>
+                        <div class="col text-center d-flex justify-content-center mb-2">
+                            <div class="link-container circle-link-4">
+                                <a class="text-center text-decoration-none cirlce-link-text"
+                                    [href]="'https://www.hodamagazine.com'">
+                                    {{"hodamag"|translate}}
+
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col text-center d-flex justify-content-center">
+                            <div class="link-container circle-link-4">
+                                <a class="text-center text-decoration-none  cirlce-link-text"
+                                    href="https://www.al-islam.org/library/islamic-laws">{{"JURISPRUDENCE"|translate}}</a>
+                            </div>
+                        </div>
+                        <div class="w-100 d-md-none"></div>
+                        <div class="col text-center d-flex justify-content-center">
+                            <div class="link-container circle-link-4">
+                                <a class="text-center text-decoration-none  cirlce-link-text"
+                                    href="https://quran.al-islam.org/"> {{"HOLYQURAN"|translate}}</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="col text-center d-flex justify-content-center mb-3 mb-md-0">
-                        <div class="link-container circle-link-4">
-                            <a class="text-center  text-decoration-none cirlce-link-text" href="http://duas.org/">
-                                {{"DUAS"|translate}}
-                                 
-                                
-                            </a>
-                        </div>
-                    </div>
-                    <div class="w-100 d-md-none"></div>
-                    <div class="col text-center d-flex justify-content-center mb-2">
-                        <div class="link-container circle-link-4">
-                            <a class="text-center text-decoration-none cirlce-link-text" [href]="'https://www.hodamagazine.com'">
-                                {{"hodamag"|translate}}
-                              
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col text-center d-flex justify-content-center">
-                        <div class="link-container circle-link-4">
-                            <a class="text-center text-decoration-none  cirlce-link-text" href="https://www.al-islam.org/library/islamic-laws">{{"JURISPRUDENCE"|translate}}</a>
-                        </div>
-                    </div>
-                     <div class="w-100 d-md-none"></div>
-                    <div class="col text-center d-flex justify-content-center">
-                        <div class="link-container circle-link-4">
-                            <a class="text-center text-decoration-none  cirlce-link-text" href="https://quran.al-islam.org/"> {{"HOLYQURAN"|translate}}</a>
-                        </div>
-                    </div>
-                  </div>
-              </div>
+                </div>
             </div>
-          </div>
+        </div>
 
     </div>

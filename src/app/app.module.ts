@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule ,BrowserTransferStateModule, TransferState } from '@angular/platform-browser';
-import {TranslateLoader, TranslateModule, TranslateService} from '@ngx-translate/core';
-import { AppRoutingModule, routes,  } from './app-routing.module';
+import { BrowserModule, BrowserTransferStateModule, TransferState } from '@angular/platform-browser';
+import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
+import { AppRoutingModule, routes, } from './app-routing.module';
 import { Location } from '@angular/common';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
-import {   NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 // import {   NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { HomeComponent } from './home/home.component';
@@ -33,27 +33,27 @@ import { NgImageSliderModule } from 'ng-image-slider';
     FooterComponent,
     HomeComponent
   ],
-  
+
   imports: [
+    NgImageSliderModule,
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
-     SharedModule ,
-     HttpClientModule,
-     FormsModule,
-     NgImageSliderModule,
-     // .withServerTransition({appId: 'serverApp'})
-     
-     BrowserAnimationsModule,
-     // NgbCollapseModule.forRoot(),
-     // BsDropdownModule.forRoot(),
-     HttpClientModule,
-     BrowserTransferStateModule,
-     TranslateModule.forRoot({
-       defaultLanguage: 'fa',
-       loader: {
-         provide: TranslateLoader,
-         useFactory: translateBrowserLoaderFactory,
-         deps: [HttpClient
-          ,TransferState
+    SharedModule,
+    HttpClientModule,
+    FormsModule,
+    // .withServerTransition({appId: 'serverApp'})
+
+    BrowserAnimationsModule,
+    // NgbCollapseModule.forRoot(),
+    // BsDropdownModule.forRoot(),
+    HttpClientModule,
+    BrowserTransferStateModule,
+    TranslateModule.forRoot({
+      defaultLanguage: 'fa',
+      loader: {
+        provide: TranslateLoader,
+        useFactory: translateBrowserLoaderFactory,
+        deps: [HttpClient
+          , TransferState
         ]
       }
     }),

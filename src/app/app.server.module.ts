@@ -6,13 +6,16 @@ import { Location } from '@angular/common';
 import { AppComponent } from './app.component';
 import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { translateServerLoaderFactory } from './core/utils/translate-server.loader';
-import { TransferState } from '@angular/platform-browser';
+import { BrowserModule, TransferState } from '@angular/platform-browser';
 import { LocalizeParser, LocalizeRouterModule, LocalizeRouterSettings } from '@gilsdav/ngx-translate-router';
 import { routes } from './app-routing.module';
 import { localizeServerLoaderFactory } from './core/utils/localize-server.loader';
 
 @NgModule({
   imports: [
+    BrowserModule.withServerTransition({
+      appId: 'serverApp'
+    }),
     AppModule,
     ServerModule,
     LocalizeRouterModule.forRoot(routes, {
@@ -35,4 +38,4 @@ import { localizeServerLoaderFactory } from './core/utils/localize-server.loader
   ],
   bootstrap: [AppComponent],
 })
-export class AppServerModule {}
+export class AppServerModule { }

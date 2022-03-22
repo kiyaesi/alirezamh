@@ -1,8 +1,10 @@
-import { DOCUMENT } from '@angular/common';
-import { Component,Renderer2, Inject, OnInit } from '@angular/core';
+import { DOCUMENT, isPlatformBrowser } from '@angular/common';
+import { Component, Renderer2, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { filter } from 'rxjs/operators';
 import { azanService } from './core/services/azan.service';
-
+declare const gtag: Function;
 declare const $: any;
 declare const window: any;
 @Component({
@@ -15,23 +17,38 @@ export class AppComponent implements OnInit {
     private translateService: TranslateService,
     private renderer: Renderer2,
 
+    @Inject(PLATFORM_ID) platformId: string,
     @Inject(DOCUMENT) private document: Document,
-  )
-  {
+    private router: Router,
+    private route: ActivatedRoute
+  ) {
+    this.isBrowser = isPlatformBrowser(platformId);
 
     this.translateService.stream('DIR').subscribe(dir => {
       this.directionChanged(dir);
-  });
-}
-ngOnInit(): void {
-  this.renderer.listen('window', 'click', (e: Event) => {
-    const parent = $(e.target).parents('.headerMenu');
-    if ((!parent.length && !$(e.target).hasClass('drop-down__button')) || $(e.target).hasClass('drop-down__item')) {
-      $('.drop-down--active').removeClass('drop-down--active');
-    }
-  });
-}
-  
+    });
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe(() => {
+      /** START : Code to Track Page View  */
+      gtag('event', 'page_view', {
+        page_path: route.url
+      })
+
+      /** END */
+    })
+  }
+  ngOnInit(): void {
+    if (!this.isBrowser) return;
+    this.renderer.listen('window', 'click', (e: Event) => {
+      const parent = $(e.target).parents('.headerMenu');
+      if ((!parent.length && !$(e.target).hasClass('drop-down__button')) || $(e.target).hasClass('drop-down__item')) {
+        $('.drop-down--active').removeClass('drop-down--active');
+      }
+    });
+  }
+  isBrowser: boolean;
+
   private directionChanged(dir: string): void {
     const htmlTag = this.document.getElementsByTagName('html')[0] as HTMLHtmlElement;
     htmlTag.dir = dir === 'rtl' ? 'rtl' : 'ltr';
@@ -54,5 +71,5 @@ ngOnInit(): void {
     }
   }
   title = 'canada';
-  
+
 }
