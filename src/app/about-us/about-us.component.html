@@ -1,160 +1,166 @@
-    <!-- section 1 (eslami img and home button) -->
-    <div class="container-fluid   site-wrapper mb-md-3 eslami-img">
-        <div class="container">
-            <div class="row">
-                <div class="col-12" style="margin-top:100px;">
-                    <div class="row">
-                        <div class="col"></div>
-                        <div class="col-5 text-center">
-                            <h1 class="about-text-1">{{"about"|translate}}</h1>
-                        </div>
-                        <div class="col"></div>
+<!-- section 1 (eslami img and home button) -->
+<div class="container-fluid   site-wrapper mb-md-3 eslami-img">
+    <div class="container">
+        <div class="row">
+            <div class="col-12" style="margin-top:100px;">
+                <div class="row">
+                    <div class="col"></div>
+                    <div class="col-5 text-center">
+                        <h1 class="about-text-1">{{"about"|translate}}</h1>
                     </div>
+                    <div class="col"></div>
                 </div>
-                <div class="col-12 mt-2">
-                    <div class="row">
-                        <div class="col"></div>
-                        <div class="col-4 text-center about-card pt-2 ">
-                            <div class="row d-flex justify-content-around">
-                                <div class="col-auto ms-2">
-                                    <a class="text-decoration-none" href="">
-                                        <i class="fas fa-home"></i>
-                                        {{"home"|translate}}
-                                    </a> 
-                                </div>
-                                <div class="col">
-                                    <i class="fas fa-angle-double-right"></i>
-                                </div>
-                                <div class="col-auto">{{"about"|translate}}</div>
+            </div>
+            <div class="col-12 mt-2">
+                <div class="row">
+                    <div class="col"></div>
+                    <div class="col-4 text-center about-card pt-2 ">
+                        <div class="row d-flex justify-content-around">
+                            <div class="col-auto ms-2">
+                                <a class="text-decoration-none" href="">
+                                    <i class="fas fa-home"></i>
+                                    {{"home"|translate}}
+                                </a>
                             </div>
+                            <div class="col">
+                                <i class="fas fa-angle-double-right"></i>
+                            </div>
+                            <div class="col-auto">{{"about"|translate}}</div>
                         </div>
-                        <div class="col"></div>
                     </div>
+                    <div class="col"></div>
                 </div>
             </div>
         </div>
     </div>
-    <br>
-    <div class="container">
-        <h4>{{"about"|translate}}</h4>
-      <p>
-         {{"about1"|translate}}  
+</div>
+<br>
+<div class="container">
+    <h4>{{"about"|translate}}</h4>
+    <p>
+        {{"about1"|translate}}
     </p>
     <br>
-        <h5>{{"goal"|translate}}</h5>
-        <p>  {{"about3"|translate}}  </p>
-        <br>
-    </div>
-    <!-- section 2 cards -->
-    <div class="container my-5">
-        <div class="row">
-            <div class=" col-12 col-md-3 d-flex justify-content-center">
-                <div class="">
-                    <div class="row  about-card-2 ">
-                        <div class="col-12 text-center d-flex justify-content-center my-2">
-                            <div class="link-container about-circle-2">
-                                <a class="text-center text-decoration-none  about-circle-text" [routerLink]="'/'+languageUrl+'/services'">خدمات</a>
-                            </div>
+    <h5>{{"goal"|translate}}</h5>
+    <p> {{"about3"|translate}} </p>
+    <br>
+</div>
+<!-- section 2 cards -->
+<div class="container my-5">
+    <div class="row">
+        <div class=" col-12 col-md-3 d-flex justify-content-center">
+            <div class="">
+                <div class="row  about-card-2 ">
+                    <div class="col-12 text-center d-flex justify-content-center my-2">
+                        <div class="link-container about-circle-2">
+                            <a class="text-center text-decoration-none  about-circle-text"
+                                [routerLink]="'/'+languageUrl+'/services'">خدمات</a>
                         </div>
-                        <div class="col-12 my-1">
-                            <h5 class="border-bottom pb-1">
-                                <p>
-                                   Service 
-                                </p>
-                            </h5>
-                            
-                        </div>
-                        <div class="col-12">
-                            <p>{{"service1"|translate}}</p>
-                            <p>{{"service2"|translate}}</p>
-                            <p>{{"service3"|translate}}</p>
-                        </div>
-                        <div class="col-12 my-1">
-                            <a class="button-more" [routerLink]="'/'+languageUrl+'/services'">{{"moreknow"|translate}}</a>
-                        </div>
+                    </div>
+                    <div class="col-12 my-1">
+                        <h5 class="border-bottom pb-1">
+                            <p>
+                                Services
+                            </p>
+                        </h5>
+
+                    </div>
+                    <div class="col-12">
+                        <p>{{"service1"|translate}}</p>
+                        <p>{{"service2"|translate}}</p>
+                        <p>{{"service3"|translate}}</p>
+                    </div>
+                    <div class="col-12 my-1">
+                        <a class="button-more" [routerLink]="'/'+languageUrl+'/services'">{{"moreknow"|translate}}</a>
                     </div>
                 </div>
             </div>
-            <div class=" col-12 col-md-3 d-flex justify-content-center">
-                <div class="">
-                    <div class="row  about-card-2 mt-2 mt-md-0">
-                        <div class="col-12 text-center d-flex justify-content-center my-2">
-                            <div class="link-container about-circle-2">
-                                <a class="text-center text-decoration-none  about-circle-text" [routerLink]="'/'+languageUrl+'/events'">معنویت</a>
-                            </div>
+        </div>
+        <div class=" col-12 col-md-3 d-flex justify-content-center">
+            <div class="">
+                <div class="row  about-card-2 mt-2 mt-md-0">
+                    <div class="col-12 text-center d-flex justify-content-center my-2">
+                        <div class="link-container about-circle-2">
+                            <a class="text-center text-decoration-none  about-circle-text"
+                                [routerLink]="'/'+languageUrl+'/events'">معنویت</a>
                         </div>
-                        <div class="col-12 my-1">
-                            <h5 class="border-bottom pb-1">
-                                <p>
-                                   Lived Spirituality 
-                                </p>
-                            </h5>
-                            
-                        </div>
-                        <div class="col-12">
-                            <p>{{"Spirituality1"|translate}}</p>
-                            <p>{{"Spirituality2"|translate}}</p>
-                            <p>{{"Spirituality3"|translate}}</p>
-                        </div>
-                        <div class="col-12 my-1">
-                            <a class="button-more" [routerLink]="'/'+languageUrl+'/events'">{{"moreknow"|translate}}</a>
-                        </div>
+                    </div>
+                    <div class="col-12 my-1">
+                        <h5 class="border-bottom pb-1">
+                            <p>
+                                Spirituality
+                            </p>
+                        </h5>
+
+                    </div>
+                    <div class="col-12">
+                        <p>{{"Spirituality1"|translate}}</p>
+                        <p>{{"Spirituality2"|translate}}</p>
+                        <p>{{"Spirituality3"|translate}}</p>
+                    </div>
+                    <div class="col-12 my-1">
+                        <a class="button-more" [routerLink]="'/'+languageUrl+'/events'">{{"moreknow"|translate}}</a>
                     </div>
                 </div>
             </div>
-            <div class="  col-12 col-md-3 d-flex justify-content-center">
-                <div class="">
-                    <div class="row  about-card-2 mt-2 mt-md-0">
-                        <div class="col-12 text-center d-flex justify-content-center my-2">
-                            <div class="link-container about-circle-2">
-                                <a class="text-center text-decoration-none  about-circle-text" [routerLink]="'/'+languageUrl+'/services/community'">فرهنگ</a>
-                            </div>
+        </div>
+        <div class="  col-12 col-md-3 d-flex justify-content-center">
+            <div class="">
+                <div class="row  about-card-2 mt-2 mt-md-0">
+                    <div class="col-12 text-center d-flex justify-content-center my-2">
+                        <div class="link-container about-circle-2">
+                            <a class="text-center text-decoration-none  about-circle-text"
+                                [routerLink]="'/'+languageUrl+'/services/community'">فرهنگ</a>
                         </div>
-                        <div class="col-12 my-1">
-                            <h5 class="border-bottom pb-1">
-                                <p>
-                                   Community
-                                </p>
-                            </h5>
-                            
-                        </div>
-                        <div class="col-12"><p>{{"Community1"|translate}}</p>
-                            <p>{{"Community2"|translate}}</p>
-                            <p>{{"Community3"|translate}}</p>
-                        </div>
-                        <div class="col-12 my-1">
-                            <a class="button-more" [routerLink]="'/'+languageUrl+'/services/community'">{{"moreknow"|translate}}</a>
-                        </div>
+                    </div>
+                    <div class="col-12 my-1">
+                        <h5 class="border-bottom pb-1">
+                            <p>
+                                Community
+                            </p>
+                        </h5>
+
+                    </div>
+                    <div class="col-12">
+                        <p>{{"Community1"|translate}}</p>
+                        <p>{{"Community2"|translate}}</p>
+                        <p>{{"Community3"|translate}}</p>
+                    </div>
+                    <div class="col-12 my-1">
+                        <a class="button-more"
+                            [routerLink]="'/'+languageUrl+'/services/community'">{{"moreknow"|translate}}</a>
                     </div>
                 </div>
             </div>
-            <div class=" col-12 col-md-3 d-flex justify-content-center">
-                <div class="">
-                    <div class="row  about-card-2 mt-2 mt-md-0">
-                        <div class="col-12 text-center d-flex justify-content-center my-2">
-                            <div class="link-container about-circle-2">
-                                <a class="text-center text-decoration-none  about-circle-text" [routerLink]="'/'+languageUrl+'/lectures'">علم</a>
-                            </div>
+        </div>
+        <div class=" col-12 col-md-3 d-flex justify-content-center">
+            <div class="">
+                <div class="row  about-card-2 mt-2 mt-md-0">
+                    <div class="col-12 text-center d-flex justify-content-center my-2">
+                        <div class="link-container about-circle-2">
+                            <a class="text-center text-decoration-none  about-circle-text"
+                                [routerLink]="'/'+languageUrl+'/lectures'">علم</a>
                         </div>
-                        <div class="col-12 my-1">
-                            <h5 class="border-bottom pb-1">
-                                <p>
-                                   Knowledge
-                                </p>
-                            </h5>
-                            
-                        </div>
-                        <div class="col-12">
-                            <p>{{"Knowledge1"|translate}}</p>
-                            <p>{{"Knowledge2"|translate}}</p>
-                            <p>{{"Knowledge3"|translate}}</p>
-                        </div>
-                        <div class="col-12 my-1">
-                            <a class="button-more"  [routerLink]="'/'+languageUrl+'/lectures'" >{{"moreknow"|translate}}</a>
-                        </div>
+                    </div>
+                    <div class="col-12 my-1">
+                        <h5 class="border-bottom pb-1">
+                            <p>
+                                Knowledge
+                            </p>
+                        </h5>
+
+                    </div>
+                    <div class="col-12">
+                        <p>{{"Knowledge1"|translate}}</p>
+                        <p>{{"Knowledge2"|translate}}</p>
+                        <p>{{"Knowledge3"|translate}}</p>
+                    </div>
+                    <div class="col-12 my-1">
+                        <a class="button-more" [routerLink]="'/'+languageUrl+'/lectures'">{{"moreknow"|translate}}</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <br>
+</div>
+<br>

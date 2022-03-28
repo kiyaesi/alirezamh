@@ -218,9 +218,7 @@ export class HomeComponent implements OnInit {
     this.nowhour = new Date().getHours();
     this.hourofmaghreb = +this.toronto[5].split(":")[0];
     this.minofmaghreb = +this.toronto[5].split(":")[1];
-    this.azansobh();
-    this.azanzohr();
-    this.azanmaghreb();
+    this.azan();
   }
   nowhour: number = 0;
   nowmin: number = new Date().getMinutes();
@@ -231,20 +229,60 @@ export class HomeComponent implements OnInit {
   hourofmaghreb: any = 0;
   minofmaghreb: any = 0;
 
-  azansobh() {
-    this.hourofsobh -= this.nowhour;
-    this.minofsobh -= this.nowmin;
-    if (this.hourofsobh < 0) {
-      this.hourofsobh = this.hourofsobh + 24;
+  azan() {
+    if (0 < this.nowhour <= this.hourofsobh) {
+      this.hourofsobh -= this.nowhour;
+      this.minofsobh -= this.nowmin;
+      if (this.hourofsobh == 0) {
+        if (this.minofsobh < 0) {
+          return;
+        }
+
+
+      }
+      setTimeout(() => {
+        console.log("sb")
+        this.sound.play();
+      }, ((this.hourofsobh * 60 * 60) + (this.minofsobh * 60)) * 1000);
+
+
     }
-    if (this.minofsobh < 0) {
-      this.minofsobh = this.minofsobh + 60;
+    else if (this.hourofsobh < this.nowhour <= this.hourofzohr) {
+      this.hourofzohr -= this.nowhour;
+      this.minofzohr -= this.nowmin;
+      if (this.hourofzohr == 0) {
+        if (this.minofzohr < 0) {
+          return;
+        }
+
+
+      }
+      setTimeout(() => {
+        console.log("zhr")
+        this.sound.play();
+      }, ((this.hourofzohr * 60 * 60) + (this.minofzohr * 60)) * 1000);
+
+
     }
-    setTimeout(() => {
-      console.log("sb")
-      this.sound.play();
-    }, ((this.hourofsobh * 60 * 60) + (this.minofsobh * 60)) * 1000);
+    else if (this.hourofzohr < this.nowhour <= this.hourofmaghreb) {
+      this.hourofmaghreb -= this.nowhour;
+      this.minofmaghreb -= this.nowmin;
+      if (this.hourofmaghreb == 0) {
+        if (this.minofmaghreb < 0) {
+          return;
+        }
+
+
+      }
+      setTimeout(() => {
+        console.log("maghreb")
+        this.sound.play();
+      }, ((this.hourofmaghreb * 60 * 60) + (this.minofmaghreb * 60)) * 1000);
+
+
+    }
   }
+
   azanzohr() {
     this.hourofzohr -= this.nowhour;
     this.minofzohr -= this.nowmin;
@@ -268,6 +306,7 @@ export class HomeComponent implements OnInit {
     this.minofmaghreb -= this.nowmin;
     if (this.hourofmaghreb < 0) {
       this.hourofmaghreb = this.hourofmaghreb + 24;
+
     }
     if (this.minofmaghreb < 0) {
       this.minofmaghreb = this.minofmaghreb + 60;
