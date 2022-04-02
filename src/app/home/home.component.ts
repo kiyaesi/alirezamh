@@ -179,7 +179,8 @@ export class HomeComponent implements OnInit {
   } as any
   azanchecker: any;
   sound = new Howl({
-    src: ['../../assets/audios/1693591.mp3']
+    src: ['../../assets/audios/1693591.mp3'],
+    loop: false
   });
   isBrowser: boolean;
   constructor(
@@ -230,7 +231,8 @@ export class HomeComponent implements OnInit {
   minofmaghreb: any = 0;
 
   azan() {
-    if (0 < this.nowhour <= this.hourofsobh) {
+    if (0 < +this.nowhour && +this.nowhour <= +this.hourofsobh) {
+      console.log(this.hourofsobh)
       this.hourofsobh -= this.nowhour;
       this.minofsobh -= this.nowmin;
       if (this.hourofsobh == 0) {
@@ -242,14 +244,20 @@ export class HomeComponent implements OnInit {
       }
       setTimeout(() => {
         console.log("sb")
+        console.log(this.hourofsobh)
+        console.log(this.minofsobh)
+
+
         this.sound.play();
       }, ((this.hourofsobh * 60 * 60) + (this.minofsobh * 60)) * 1000);
 
 
     }
-    else if (this.hourofsobh < this.nowhour <= this.hourofzohr) {
+    else if ((+this.hourofsobh < +this.nowhour) && (+this.nowhour <= +this.hourofzohr)) {
       this.hourofzohr -= this.nowhour;
       this.minofzohr -= this.nowmin;
+      console.log("zohr")
+
       if (this.hourofzohr == 0) {
         if (this.minofzohr < 0) {
           return;
@@ -264,9 +272,11 @@ export class HomeComponent implements OnInit {
 
 
     }
-    else if (this.hourofzohr < this.nowhour <= this.hourofmaghreb) {
+    else if (+this.hourofzohr < +this.nowhour && +this.nowhour <= +this.hourofmaghreb) {
       this.hourofmaghreb -= this.nowhour;
       this.minofmaghreb -= this.nowmin;
+      console.log("maghreb")
+
       if (this.hourofmaghreb == 0) {
         if (this.minofmaghreb < 0) {
           return;
@@ -281,6 +291,9 @@ export class HomeComponent implements OnInit {
 
 
     }
+  }
+  ngOnDestroy(): void {
+    this.sound.stop();
   }
 
   azanzohr() {
