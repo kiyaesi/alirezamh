@@ -182,6 +182,14 @@ export class HomeComponent implements OnInit {
     src: ['../../assets/audios/1693591.mp3'],
     loop: false
   });
+  soundzohr = new Howl({
+    src: ['../../assets/audios/1693591.mp3'],
+    loop: false
+  });
+  soundmaghreb = new Howl({
+    src: ['../../assets/audios/1693591.mp3'],
+    loop: false
+  });
   isBrowser: boolean;
   constructor(
     @Inject(PLATFORM_ID) platformId: string,
@@ -220,6 +228,8 @@ export class HomeComponent implements OnInit {
     this.hourofmaghreb = +this.toronto[5].split(":")[0];
     this.minofmaghreb = +this.toronto[5].split(":")[1];
     this.azan();
+    this.azanzohr();
+    this.azanmaghreb();
   }
   nowhour: number = 0;
   nowmin: number = new Date().getMinutes();
@@ -253,7 +263,16 @@ export class HomeComponent implements OnInit {
 
 
     }
-    else if ((+this.hourofsobh < +this.nowhour) && (+this.nowhour <= +this.hourofzohr)) {
+
+  }
+  ngOnDestroy(): void {
+    this.sound.stop();
+    this.soundmaghreb.stop();
+    this.soundzohr.stop();
+  }
+
+  azanzohr() {
+    if ((0 < +this.nowhour) && (+this.nowhour <= +this.hourofzohr)) {
       this.hourofzohr -= this.nowhour;
       this.minofzohr -= this.nowmin;
       console.log("zohr")
@@ -267,12 +286,15 @@ export class HomeComponent implements OnInit {
       }
       setTimeout(() => {
         console.log("zhr")
-        this.sound.play();
+        this.soundzohr.play();
       }, ((this.hourofzohr * 60 * 60) + (this.minofzohr * 60)) * 1000);
 
 
     }
-    else if (+this.hourofzohr < +this.nowhour && +this.nowhour <= +this.hourofmaghreb) {
+
+  }
+  azanmaghreb() {
+    if (0 < +this.nowhour && +this.nowhour <= +this.hourofmaghreb) {
       this.hourofmaghreb -= this.nowhour;
       this.minofmaghreb -= this.nowmin;
       console.log("maghreb")
@@ -286,48 +308,11 @@ export class HomeComponent implements OnInit {
       }
       setTimeout(() => {
         console.log("maghreb")
-        this.sound.play();
+        this.soundmaghreb.play();
       }, ((this.hourofmaghreb * 60 * 60) + (this.minofmaghreb * 60)) * 1000);
 
 
     }
-  }
-  ngOnDestroy(): void {
-    this.sound.stop();
-  }
-
-  azanzohr() {
-    this.hourofzohr -= this.nowhour;
-    this.minofzohr -= this.nowmin;
-    if (this.hourofzohr < 0) {
-      this.hourofzohr = this.hourofzohr + 24;
-    }
-    if (this.minofzohr < 0) {
-      this.minofzohr = this.minofzohr + 60;
-    }
-    setTimeout(() => {
-      console.log("zhr")
-      this.sound.play();
-    }, ((this.hourofzohr * 60 * 60) + (this.minofzohr * 60)) * 1000);
-
-
-  }
-  azanmaghreb() {
-    console.log("shab")
-
-    this.hourofmaghreb -= this.nowhour;
-    this.minofmaghreb -= this.nowmin;
-    if (this.hourofmaghreb < 0) {
-      this.hourofmaghreb = this.hourofmaghreb + 24;
-
-    }
-    if (this.minofmaghreb < 0) {
-      this.minofmaghreb = this.minofmaghreb + 60;
-    }
-    setTimeout(() => {
-      this.sound.play();
-    }, ((this.hourofmaghreb * 60 * 60) + (this.minofmaghreb * 60)) * 1000);
-
   }
 
 
