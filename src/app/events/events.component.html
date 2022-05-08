@@ -18,8 +18,8 @@
                             <div class="col-auto ms-2">
                                 <a class="text-decoration-none" href="">
                                     <i class="fas fa-home"></i>
-                                    {{"home"|translate}} 
-                                </a> 
+                                    {{"home"|translate}}
+                                </a>
                             </div>
                             <div class="col">
                                 <i class="fas fa-angle-double-right"></i>
@@ -36,10 +36,156 @@
     </div>
 </div>
 <br>
-    <div class="container">
-        <h4>{{"events"|translate}}</h4>
-      <p>
-         {{"events1"|translate}}  
+<div class="container" *ngIf="notEvents">
+    <h4>{{"events"|translate}}</h4>
+    <p>
+        {{"events1"|translate}}
     </p>
-    <br>  <br>
+    <br> <br>
+</div>
+<div class="container" *ngIf="!notEvents">
+    <h4>{{"events"|translate}}</h4>
+    <div class="ic-list-events ic-clearfix">
+        <!-- ic_rounded -->
+
+
+        <div *ngIf="!perlang">
+            <div class="ic-list-event ic-clearfix" *ngFor="let item of allEventsEn, let i=index">
+
+
+                <!-- Event -->
+
+
+
+                <a href="" title="" class="ic-text-decoration-none">
+                    <div class="ic-box-date">
+                        <div class="ic-date">
+                            <div class="ic-day">
+                                {{item.dateDay}} </div>
+                            <div class="ic-month">
+                                {{item.datemonth}} </div>
+                            <div class="ic-year">
+                                {{item.dateyear}} </div>
+                            <div class="ic-time">
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="ic-content">
+
+                    <div class="ic-event-title">
+
+                        <div class="ic-title-header ic-margin-0 ic-padding-0">
+                            <h2>
+                                <a href="" class="ic-text-decoration-none floatl">
+                                    {{item.name}} </a>
+                            </h2>
+                        </div>
+                        <div class="ic-title-cat ic-margin-0 ic-padding-0">
+                            <a href="" type="button"
+                                class="ic-title-cat-btn ic-button ic-padding-1 ic-radius-1 ic-bg-bright"
+                                style="background:#99f56e">
+                                {{item.category}} </a>
+                        </div>
+
+                    </div>
+
+
+                    <div class="nextdate ic-next-date ic-clearfix">
+                        <strong><span
+                                class="ic-single-startdate">{{item.dateDay}}&nbsp;{{item.datemonth}}&nbsp;{{item.dateyear}}</span>
+                            <span class="ic-single-starttime">{{item.datehour}}</span></strong>
+                    </div>
+
+                    <div class="place ic-place">
+
+                        {{item.location}}
+                    </div>
+
+                    <div class="descshort ic-descshort">
+                        <i> {{item.description}}</i> <a [routerLink]="''+i" class="more">[...]</a>
+                    </div>
+
+
+                    <div class="moreinfos ic-more-info">
+                        <a [routerLink]="''+i">
+                            + info </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div *ngIf="perlang">
+            <div class="ic-list-event ic-clearfix" *ngFor="let item of allEventsfa, let i=index">
+
+
+                <!-- Event -->
+
+
+
+                <a href="" title="" class="ic-text-decoration-none">
+                    <div class="ic-box-date">
+                        <div class="ic-date">
+                            <div class="ic-day">
+                                {{item.dateDay}} </div>
+                            <div class="ic-month">
+                                {{item.datemonth}} </div>
+                            <div class="ic-year">
+                                {{item.dateyear}} </div>
+                            <div class="ic-time">
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="ic-content">
+
+                    <div class="ic-event-title">
+
+                        <div class="ic-title-header ic-margin-0 ic-padding-0">
+                            <h2>
+                                <a href="" class="ic-text-decoration-none floatl">
+                                    {{item.name}} </a>
+                            </h2>
+                        </div>
+                        <div class="ic-title-cat ic-margin-0 ic-padding-0">
+                            <a href="" type="button"
+                                class="ic-title-cat-btn ic-button ic-padding-1 ic-radius-1 ic-bg-bright"
+                                style="background:#99f56e">
+                                {{item.category}} </a>
+                        </div>
+
+                    </div>
+
+
+                    <div class="nextdate ic-next-date ic-clearfix">
+                        <strong><span
+                                class="ic-single-startdate">{{item.dateDay}}&nbsp;{{item.datemonth}}&nbsp;{{item.dateyear}}</span>
+                            <span class="ic-single-starttime">{{item.datehour}}</span></strong>
+                    </div>
+
+                    <div class="place ic-place">
+
+                        {{item.location}}
+                    </div>
+
+                    <div class="descshort ic-descshort">
+                        <i> {{item.description}}</i> <a href="" class="more">[...]</a>
+                    </div>
+
+
+                    <div class="moreinfos ic-more-info">
+                        <a [routerLink]="''+i">
+                            + info </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
 </div>

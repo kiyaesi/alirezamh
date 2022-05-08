@@ -18,7 +18,6 @@ import { LocalizeParser, LocalizeRouterModule, LocalizeRouterSettings } from '@g
 import { localizeBrowserLoaderFactory } from './core/utils/localize-browser.loader';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
-import { azanService } from './core/services/azan.service';
 import { FormsModule } from '@angular/forms';
 import { NgImageSliderModule } from 'ng-image-slider';
 // import { LocalizeRouterModule } from 'localize-router';
@@ -69,7 +68,7 @@ import { NgImageSliderModule } from 'ng-image-slider';
     AppRoutingModule,
     // AngMusicPlayerModule
   ],
-  providers: [azanService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

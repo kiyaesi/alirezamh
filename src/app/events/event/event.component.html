@@ -1,0 +1,110 @@
+<div class="container-fluid   site-wrapper mb-md-3 eslami-img">
+    <div class="container">
+        <div class="row">
+            <div class="col-12" style="margin-top:100px;">
+                <div class="row">
+                    <div class="col"></div>
+                    <div class="col-5 text-center">
+                        <h1 class="about-text-1">{{"events"|translate}}</h1>
+                    </div>
+                    <div class="col"></div>
+                </div>
+            </div>
+            <div class="col-12 mt-2">
+                <div class="row">
+                    <div class="col"></div>
+                    <div class="col-4 text-center about-card pt-2 ">
+                        <div class="row d-flex justify-content-around">
+                            <div class="col-auto ms-2">
+                                <a class="text-decoration-none" href="">
+                                    <i class="fas fa-home"></i>
+                                    {{"home"|translate}}
+                                </a>
+                            </div>
+                            <div class="col">
+                                <i class="fas fa-angle-double-right"></i>
+                            </div>
+                            <div class="col-auto">{{"events"|translate}}</div>
+                        </div>
+                    </div>
+                    <div class="col">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="icinfo ic-info ic-clearfix">
+
+        <div class="image ic-image">
+        </div>
+
+        <div class="details ic-details">
+
+            <div class="ic-event-date">
+                <strong>{{"Date"|translate}}:</strong>&nbsp;<span
+                    class="ic-single-startdate">{{events.dateDay}}&nbsp;{{events.datemonth}}&nbsp;{{events.dateyear}}</span>
+                <span class="ic-single-starttime">{{events.datehour}}</span>
+            </div>
+
+            <!-- <p>
+
+
+
+                <strong>City:</strong>&nbsp;Sarzay,&nbsp;France
+            </p> -->
+
+        </div>
+
+
+        <div id="ic-detail-desc" class="ic-detail-desc">
+            <div class="ic-short-description">
+            </div>
+            <div class="ic-full-description">
+                {{events.fullDescription}}
+            </div>
+
+
+            <p>&nbsp;</p>
+
+            <div class="ic-info-box">
+
+                <div class="ic-info-box-header">
+                    <label>{{"Information"|translate}}</label>
+                </div>
+
+                <div class="ic-info-box-content ic-divTable ic-align-left ic-clearfix">
+
+
+                    <!-- <div class="ic-divRow ic-info-tickets-left">
+                        <div class="ic-divCell ic-label">Seats available</div>
+                        <div class="ic-divCell ic-value">200</div>
+                    </div> -->
+
+                    <div class="ic-divRow ic-info-tickets">
+                        <div class="ic-divCell ic-label">{{"Numberofseats"}}</div>
+                        <div class="ic-divCell ic-value">{{events.capacity}}</div>
+                    </div>
+
+
+
+                    <!-- <div class="ic-divRow ic-info-website">
+                        <div class="ic-divCell ic-label">Website</div>
+                        <div class="ic-divCell ic-value"><a rel="nofollow" target="_blank">https://www.icagenda.com</a>
+                        </div>
+                    </div> -->
+
+
+                    <div class="ic-divRow ic-info-address">
+                        <div class="ic-divCell ic-label">{{"Address"|translate}}</div>
+                        <div class="ic-divCell ic-value">{{events.location}}<br></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>

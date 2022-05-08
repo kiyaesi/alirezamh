@@ -1,0 +1,52 @@
+/*! CSS Used from: https://demo.icagenda.com/media/templates/site/cassiopeia/css/template.min.css?e8c5e05cf82627b0f99dc55576e7ee58 */
+*,:after,:before{box-sizing:border-box;}
+p{margin-bottom:1rem;margin-top:0;}
+strong{font-weight:bolder;}
+a{text-decoration:underline;}
+a:hover{color:var(--cassiopeia-color-hover);}
+img{vertical-align:middle;}
+label{display:inline-block;}
+::-moz-focus-inner{border-style:none;padding:0;}
+img{height:auto;max-width:100%;}
+a{color:var(--cassiopeia-color-link);}
+a:not([class]){text-decoration:underline;}
+a:focus,a:hover{color:var(--cassiopeia-color-hover);}
+/*! CSS Used from: https://demo.icagenda.com/media/com_icagenda/css/icagenda-front.css?e8c5e05cf82627b0f99dc55576e7ee58 */
+.ic-clearfix{*zoom:1;}
+.ic-clearfix:before,.ic-clearfix:after{display:table;content:"";line-height:0;}
+.ic-clearfix:after{clear:both;}
+/*! CSS Used from: https://demo.icagenda.com/components/com_icagenda/themes/packs/ic_rounded/css/ic_rounded_component.css */
+.ic-align-left{text-align:left;}
+.ic-clearfix{*zoom:1;}
+.ic-clearfix:before,.ic-clearfix:after{display:table;content:"";line-height:0;}
+.ic-clearfix:after{clear:both;}
+#icagenda a:hover{text-decoration:none;}
+.ic-info{margin:10px 0;padding:10px 5px 10px 5px;text-align:center;background:#e5e5e5;background:rgba(0,0,0,0.1);border:1px solid #999;border-radius:10px;word-break:break-word;word-wrap:break-word;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto;}
+.ic-info .ic-details{text-align:center;padding:1%;}
+.ic-image{text-align:center;}
+.ic-image img{max-width:98%;border:0px solid #ccc;margin-bottom:10px;border-radius:5px;}
+.ic-single-starttime,.ic-single-endtime,.ic-datetime-separator{font-size:0.8em;}
+.ic-divTable{display:table;width:auto;border-collapse:separate;border-spacing:5px;}
+.ic-divRow{display:table-row;}
+.ic-divCell{padding:1px 5px;}
+.ic-label{display:table-cell;min-width:110px;font-weight:bold;padding-right:20px;}
+.ic-value{display:table-cell;width:auto;}
+.ic-detail-desc{padding:10px;margin:10px;background:#fff;background:rgba(255,255,255,0.9);color:#333;text-align:left;text-shadow:none;border:0;border-radius:5px;}
+.ic-short-description{font-weight:bold;}
+.ic-info-box{display:block;width:100%;text-align:center;background:#ccc;color:#333;padding-top:0px;margin:0;border:0;-webkit-border-radius:5px;-moz-border-radius:5px;-o-border-radius:5px;border-radius:5px;}
+.ic-info-box-header label{text-transform:uppercase;font-weight:bold;}
+.ic-info-box-header{display:block;background:#555;vertical-align:middle;border:0;padding:10px;text-align:center;color:#fff;-webkit-border-radius:5px 5px 0 0;-moz-border-radius:5px 5px 0 0;-o-border-radius:5px 5px 0 0;border-radius:5px 5px 0 0;}
+.ic-info-box-content{display:block;width:auto;vertical-align:top;border:0;margin:10px;text-align:left;color:#111;}
+/*! CSS Used from: https://demo.icagenda.com/components/com_icagenda/themes/packs/default/css/default_module.css */
+.ic-clearfix{*zoom:1;}
+.ic-clearfix:before,.ic-clearfix:after{display:table;content:"";line-height:0;}
+.ic-clearfix:after{clear:both;}
+/*! CSS Used from: Embedded */
+@media screen and (min-width:769px) and (max-width:1200px){
+.ic-info-box{text-align:center;width:auto;}
+.ic-info-box .ic-info-box-header{width:86%;}
+.ic-info-box .ic-info-box-content{width:64%;}
+}
+@media screen and (max-width:480px){
+.ic-divCell{float:left;}
+}

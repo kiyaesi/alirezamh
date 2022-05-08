@@ -1,0 +1,77 @@
+/*! CSS Used from: https://demo.icagenda.com/media/templates/site/cassiopeia/css/template.min.css?e8c5e05cf82627b0f99dc55576e7ee58 */
+*,:after,:before{box-sizing:border-box;}
+h2{font-weight:500;line-height:1.2;margin-bottom:.5rem;margin-top:0;}
+h2{font-size:calc(1.325rem + .9vw);}
+@media (min-width:1200px){
+h2{font-size:2rem;}
+}
+strong{font-weight:bolder;}
+a{text-decoration:underline;}
+a:hover{color:var(--cassiopeia-color-hover);}
+[type=button]{-webkit-appearance:button;}
+::-moz-focus-inner{border-style:none;padding:0;}
+h2{font-family:var(--cassiopeia-font-family-headings,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji");font-weight:var(--cassiopeia-font-weight-headings,700);}
+a{color:var(--cassiopeia-color-link);}
+a:not([class]){text-decoration:underline;}
+a:focus,a:hover{color:var(--cassiopeia-color-hover);}
+/*! CSS Used from: https://demo.icagenda.com/media/com_icagenda/css/icagenda.css?e8c5e05cf82627b0f99dc55576e7ee58 */
+.ic-text-decoration-none{text-decoration:none!important;}
+.ic-button{display:inline-block;text-align:center;text-decoration:none;vertical-align:middle;cursor:pointer;transition:color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;}
+.ic-button:hover{opacity:0.8;}
+.ic-radius-1{border-radius:0.25rem;}
+.ic-margin-0{margin:0!important;}
+.ic-padding-0{padding:0!important;}
+.ic-padding-1{padding:0.25rem!important;}
+.ic-bg-bright{color:#000;}
+.ic-bg-bright:focus,.ic-bg-bright:hover{color:#000;}
+.ic-bg-dark{color:#fff;}
+.ic-bg-dark:focus,.ic-bg-dark:hover{color:#fff;}
+/*! CSS Used from: https://demo.icagenda.com/media/com_icagenda/css/icagenda-front.css?e8c5e05cf82627b0f99dc55576e7ee58 */
+.ic-clearfix{*zoom:1;}
+.ic-clearfix:before,.ic-clearfix:after{display:table;content:"";line-height:0;}
+.ic-clearfix:after{clear:both;}
+/*! CSS Used from: https://demo.icagenda.com/components/com_icagenda/themes/packs/ic_rounded/css/ic_rounded_component.css */
+.ic-clearfix{*zoom:1;}
+.ic-clearfix:before,.ic-clearfix:after{display:table;content:"";line-height:0;}
+.ic-clearfix:after{clear:both;}
+#icagenda a:hover{text-decoration:none;}
+.ic-list-event{background:none;background:rgba(221,221,221,0.1);border-radius:.25rem;margin:1% 2px;padding:5px;width:100%;}
+.ic-list-event:nth-child(2n+1){background:none;background:rgba(221,221,221,0.2);}
+.ic-box-date{float:left;vertical-align:top;width:25%;height:auto;min-height:80px;margin:0;padding:3% 0 25px 0;text-align:center;font-size:20px;color:#fff;font-weight:bold;border-radius:.5rem;text-shadow:#000 2px 2px 10px;background-color:#ddd;background-repeat:no-repeat;background-position:center center;background-size:cover;border-width:0px;border-style:solid;border-color:#ddd;box-sizing:content-box;transition:border-radius 0.5s, color 0.5s;-moz-transition:border-radius 0.5s, color 0.5s;-webkit-transition:border-radius 0.5s, color 0.5s;-o-transition:border-radius 0.5s, color 0.5s;}
+.ic-box-date:hover{transition:border-radius 0.5s, color 0.5s;-moz-transition:border-radius 0.5s, color 0.5s;-webkit-transition:border-radius 0.5s, color 0.5s;-o-transition:border-radius 0.5s, color 0.5s;border-radius:1rem;}
+.ic-date{line-height:0!important;text-align:center;}
+.ic-day{line-height:42px!important;font-size:42px;font-weight:700;}
+.ic-month{line-height:28px!important;font-size:28px;letter-spacing:2px;font-weight:500;}
+.ic-year{line-height:24px!important;font-size:20px;letter-spacing:2px;font-weight:500;}
+.ic-time{line-height:18px!important;font-size:14px;letter-spacing:3px;font-weight:400;}
+.ic-content{float:left;margin:0;padding:5px 0 0 10px;width:75%;white-space:normal;box-sizing:border-box;}
+div.ic-event-title{display:inline-block;width:100%;border-bottom:1px solid #cccccc;height:auto;margin:0;padding:0;padding-bottom:3px!important;}
+.ic-title-header{float:left;width:70%;height:auto;vertical-align:top;}
+.ic-title-header h2{margin:0;padding:0;line-height:auto;text-shadow:none;border-bottom:0;background:none;}
+.ic-title-header a:hover,.ic-title-header a:active,.ic-title-header a:focus{text-shadow:none;background:none;}
+.ic-title-cat{float:left;width:30%;font-size:0.9rem;line-height:1rem;font-weight:500;text-align:right;vertical-align:top;}
+.ic-content .ic-next-date{margin:5px 0;font-size:16px;}
+.ic-place{font-weight:normal;font-size:14px;}
+.ic-descshort{font-weight:normal;font-size:12px;margin:5px 0 0 0!important;}
+.ic-more-info{background:none;float:right;font-weight:bold;font-size:10px;text-transform:uppercase;cursor:pointer;}
+.ic-more-info a:link,.ic-more-info a:visited{background:none;text-decoration:none;}
+.ic-more-info a:hover,.ic-more-info a:active,.ic-more-info a:focus{background:none;cursor:pointer;}
+.ic-single-starttime,.ic-single-endtime,.ic-datetime-separator{font-size:0.8em;}
+/*! CSS Used from: https://demo.icagenda.com/components/com_icagenda/themes/packs/default/css/default_module.css */
+.ic-clearfix{*zoom:1;}
+.ic-clearfix:before,.ic-clearfix:after{display:table;content:"";line-height:0;}
+.ic-clearfix:after{clear:both;}
+/*! CSS Used from: Embedded */
+@media screen and (min-width:481px) and (max-width:768px){
+.ic-title-header{width:98%;text-align:left;}
+.ic-title-cat{width:98%;text-align:left;}
+}
+@media screen and (max-width:480px){
+.ic-box-date{width:auto;float:none;}
+.ic-content{width:auto;float:none;}
+.ic-title-header{width:98%;text-align:center;}
+.ic-title-cat{width:98%;text-align:center;}
+}
+.floatl{
+    float: left;
+}

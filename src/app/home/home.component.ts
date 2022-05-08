@@ -1,5 +1,4 @@
 import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
-import { azanService } from '../core/services/azan.service';
 import { LocalizeRouterService } from '@gilsdav/ngx-translate-router';
 import { Howl, Howler } from 'howler';
 import { isPlatformBrowser } from '@angular/common';
@@ -193,7 +192,6 @@ export class HomeComponent implements OnInit {
   isBrowser: boolean;
   constructor(
     @Inject(PLATFORM_ID) platformId: string,
-    private azanservice: azanService,
     private localizeRouterService: LocalizeRouterService,
 
   ) {

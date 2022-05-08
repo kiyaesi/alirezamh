@@ -3,7 +3,6 @@ import { Component, Renderer2, Inject, OnInit, PLATFORM_ID } from '@angular/core
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { filter } from 'rxjs/operators';
-import { azanService } from './core/services/azan.service';
 declare const gtag: Function;
 declare const $: any;
 declare const window: any;
@@ -27,19 +26,19 @@ export class AppComponent implements OnInit {
     this.translateService.stream('DIR').subscribe(dir => {
       this.directionChanged(dir);
     });
+
+  }
+  ngOnInit(): void {
+    if (!this.isBrowser) return;
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe(() => {
       /** START : Code to Track Page View  */
       gtag('event', 'page_view', {
-        page_path: route.url
+        page_path: this.route.url
       })
-
       /** END */
     })
-  }
-  ngOnInit(): void {
-    if (!this.isBrowser) return;
     this.renderer.listen('window', 'click', (e: Event) => {
       const parent = $(e.target).parents('.headerMenu');
       if ((!parent.length && !$(e.target).hasClass('drop-down__button')) || $(e.target).hasClass('drop-down__item')) {
