@@ -2,6 +2,7 @@ import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { LocalizeRouterService } from '@gilsdav/ngx-translate-router';
 import { Howl, Howler } from 'howler';
 import { isPlatformBrowser } from '@angular/common';
+import { Router } from '@angular/router';
 
 // import sound from '../../assets/homesound.json';
 declare const prayTime: any;
@@ -193,9 +194,29 @@ export class HomeComponent implements OnInit {
   constructor(
     @Inject(PLATFORM_ID) platformId: string,
     private localizeRouterService: LocalizeRouterService,
-
+    private router: Router
   ) {
     this.isBrowser = isPlatformBrowser(platformId);
+
+  }
+  reload() {
+    if ((0 < +this.nowhour) && (+this.nowhour <= +this.hourofshab)) {
+      this.hourofshab -= this.nowhour;
+      this.minofshab -= (this.nowmin - 1);
+      console.log("zohr")
+      console.log(this.nowhour)
+
+
+      setTimeout(() => {
+        console.log("shab")
+        let currentUrl = this.router.url;
+        this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+        this.router.onSameUrlNavigation = 'reload';
+        this.router.navigate([currentUrl]);
+      }, ((this.hourofshab * 60 * 60) + (this.minofshab * 60)) * 1000);
+
+
+    }
 
   }
   ngOnInit(): void {
@@ -228,6 +249,7 @@ export class HomeComponent implements OnInit {
     this.azan();
     this.azanzohr();
     this.azanmaghreb();
+    this.reload();
   }
   nowhour: number = 0;
   nowmin: number = new Date().getMinutes();
@@ -237,8 +259,12 @@ export class HomeComponent implements OnInit {
   minofzohr: any = 0;
   hourofmaghreb: any = 0;
   minofmaghreb: any = 0;
+  hourofshab: any = 23;
+  minofshab: any = 59;
 
   azan() {
+    console.log("sb")
+
     if (0 < +this.nowhour && +this.nowhour <= +this.hourofsobh) {
       console.log(this.hourofsobh)
       this.hourofsobh -= this.nowhour;
@@ -265,8 +291,14 @@ export class HomeComponent implements OnInit {
   }
   ngOnDestroy(): void {
     this.sound.stop();
+    console.log("maghrebend")
+
     this.soundmaghreb.stop();
+    console.log("maghrebde")
+
     this.soundzohr.stop();
+    console.log("maghrebde")
+
   }
 
   azanzohr() {

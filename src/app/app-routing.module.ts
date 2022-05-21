@@ -5,7 +5,8 @@ export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   {
     path: 'home',
-    component: HomeComponent
+    component: HomeComponent,
+
   },
   { path: 'about-us', loadChildren: () => import('./about-us/about-us.module').then(m => m.AboutUsModule) },
   { path: 'events', loadChildren: () => import('./events/events.module').then(m => m.EventsModule) },
@@ -24,6 +25,7 @@ export const routes: Routes = [
   imports: [RouterModule.forRoot(routes, {
     // relativeLinkResolution: 'legacy',
     scrollPositionRestoration: 'enabled',
+    onSameUrlNavigation: "reload"
   })],
   exports: [RouterModule]
 })
