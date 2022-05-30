@@ -39,6 +39,7 @@ export class HomeComponent implements OnInit {
   dTodayDate: Date = new Date();
   nowtime: Date = new Date();
   indexforsound: number = 0;
+  reloadset: any;
   datasound: any[] = [
     {
       "url": "../../assets/audios/q&a/1.mp3",
@@ -203,11 +204,10 @@ export class HomeComponent implements OnInit {
     if ((0 < +this.nowhour) && (+this.nowhour <= +this.hourofshab)) {
       this.hourofshab -= this.nowhour;
       this.minofshab -= (this.nowmin - 1);
-      console.log("zohr")
       console.log(this.nowhour)
 
 
-      setTimeout(() => {
+      this.reloadset = setTimeout(() => {
         console.log("shab")
         let currentUrl = this.router.url;
         this.router.routeReuseStrategy.shouldReuseRoute = () => false;
@@ -261,7 +261,9 @@ export class HomeComponent implements OnInit {
   minofmaghreb: any = 0;
   hourofshab: any = 23;
   minofshab: any = 59;
-
+  sobhSetTimeout: any;
+  zohrSetTimeout: any;
+  eshaSetTimeout: any;
   azan() {
     console.log("sb")
 
@@ -276,7 +278,7 @@ export class HomeComponent implements OnInit {
 
 
       }
-      setTimeout(() => {
+      this.sobhSetTimeout = setTimeout(() => {
         console.log("sb")
         console.log(this.hourofsobh)
         console.log(this.minofsobh)
@@ -291,8 +293,11 @@ export class HomeComponent implements OnInit {
   }
   ngOnDestroy(): void {
     this.sound.stop();
-    console.log("maghrebend")
-
+    console.log("maghrebend");
+    clearTimeout(this.sobhSetTimeout);
+    clearTimeout(this.zohrSetTimeout);
+    clearTimeout(this.eshaSetTimeout);
+    clearTimeout(this.reloadset);
     this.soundmaghreb.stop();
     console.log("maghrebde")
 
@@ -314,7 +319,7 @@ export class HomeComponent implements OnInit {
 
 
       }
-      setTimeout(() => {
+      this.zohrSetTimeout = setTimeout(() => {
         console.log("zhr")
         this.soundzohr.play();
       }, ((this.hourofzohr * 60 * 60) + (this.minofzohr * 60)) * 1000);
@@ -336,7 +341,7 @@ export class HomeComponent implements OnInit {
 
 
       }
-      setTimeout(() => {
+      this.eshaSetTimeout = setTimeout(() => {
         console.log("maghreb")
         this.soundmaghreb.play();
       }, ((this.hourofmaghreb * 60 * 60) + (this.minofmaghreb * 60)) * 1000);
