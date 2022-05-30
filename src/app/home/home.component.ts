@@ -40,6 +40,11 @@ export class HomeComponent implements OnInit {
   nowtime: Date = new Date();
   indexforsound: number = 0;
   reloadset: any;
+  ngAfterViewInit(): void {
+    //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
+    //Add 'implements AfterViewInit' to the class.
+    console.log("version 1.0")
+  }
   datasound: any[] = [
     {
       "url": "../../assets/audios/q&a/1.mp3",
